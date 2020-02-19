@@ -149,6 +149,10 @@ html {
   %noborder {
     border: 0 none;
   }
+  .borderBx,
+  %borderBx {
+    box-sizing: border-box;
+  }
   .hide,
   %hide {
     display: none;
@@ -246,6 +250,14 @@ html {
   .width100,
   %width100 {
     width: 100%;
+  }
+  .m15-btm,
+  %m15-btm{
+    margin-bottom: 15px !important;
+  }
+  .m30-btm,
+  %m30-btm{
+    margin-bottom: 30px !important;
   }
 
   @mixin rounded-corners($property) {
