@@ -70,7 +70,12 @@
 .dm-eye-disabled:before {
   content: "\63";
 }
-
+.dm-square-o:before {
+  content: "\61";
+}
+.dm-android-done:before {
+  content: "\64";
+}
 
 /* -------------------------------------
 	Variables Setting
@@ -168,16 +173,16 @@ html {
   %display-table {
     display: table;
   }
-  .text-center,
-  %text-center {
+  .t-center,
+  %t-center {
     text-align: center;
   }
-  .text-left,
-  %text-left {
+  .t-left,
+  %t-left {
     text-align: left;
   }
-  .text-right,
-  %text-right {
+  .t-right,
+  %t-right {
     text-align: right;
   }
   .bold,
