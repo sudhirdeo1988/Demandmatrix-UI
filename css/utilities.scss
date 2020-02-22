@@ -76,6 +76,63 @@
 .dm-android-done:before {
   content: "\64";
 }
+.dm-caret-down:before {
+  content: "\69";
+}
+.dm-caret-left:before {
+  content: "\6a";
+}
+.dm-caret-right:before {
+  content: "\6b";
+}
+.dm-caret-up:before {
+  content: "\6c";
+}
+.dm-filter:before {
+  content: "\65";
+}
+.dm-icon-adoption:before {
+  content: "\66";
+}
+.dm-icon-aut:before {
+  content: "\67";
+}
+.dm-icon-dashboard:before {
+  content: "\68";
+}
+.dm-icon-ntp:before {
+  content: "\6d";
+}
+.dm-icon-technology:before {
+  content: "\6e";
+}
+.dm-icon-trending:before {
+  content: "\6f";
+}
+.dm-spreadsheet:before {
+  content: "\70";
+}
+.dm-angle-left:before {
+  content: "\71";
+}
+.dm-angle-right:before {
+  content: "\72";
+}
+.dm-sort:before {
+  content: "\73";
+}
+.dm-sort-asc:before {
+  content: "\74";
+}
+.dm-sort-desc:before {
+  content: "\75";
+}
+.dm-angle-double-left:before {
+  content: "\76";
+}
+.dm-angle-double-right:before {
+  content: "\77";
+}
 
 /* -------------------------------------
 	Variables Setting
@@ -101,6 +158,7 @@ a:hover {
 }
 body,
 html {
+  background-color: #F7F6F4;
   height: 100%;
   font-family: $font-regular;
   font-size: 14px;
@@ -239,16 +297,16 @@ html {
     font-size: 24px;
   }
 
-  .valign-middle,
-  %valign-middle {
+  .va-mid,
+  %va-mid {
     vertical-align: middle;
   }
-  .height100,
-  %height100 {
+  .h100,
+  %h100 {
     height: 100%;
   }
-  .width100,
-  %width100 {
+  .w100,
+  %w100 {
     width: 100%;
   }
   .m15-btm,
@@ -258,6 +316,10 @@ html {
   .m30-btm,
   %m30-btm{
     margin-bottom: 30px !important;
+  }
+  .m5-left,
+  %m5-left{
+    margin-left: 5px;
   }
 
   @mixin rounded-corners($property) {

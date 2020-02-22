@@ -71,6 +71,82 @@
   content: "d";
 }
 
+.dm-caret-down:before {
+  content: "i";
+}
+
+.dm-caret-left:before {
+  content: "j";
+}
+
+.dm-caret-right:before {
+  content: "k";
+}
+
+.dm-caret-up:before {
+  content: "l";
+}
+
+.dm-filter:before {
+  content: "e";
+}
+
+.dm-icon-adoption:before {
+  content: "f";
+}
+
+.dm-icon-aut:before {
+  content: "g";
+}
+
+.dm-icon-dashboard:before {
+  content: "h";
+}
+
+.dm-icon-ntp:before {
+  content: "m";
+}
+
+.dm-icon-technology:before {
+  content: "n";
+}
+
+.dm-icon-trending:before {
+  content: "o";
+}
+
+.dm-spreadsheet:before {
+  content: "p";
+}
+
+.dm-angle-left:before {
+  content: "q";
+}
+
+.dm-angle-right:before {
+  content: "r";
+}
+
+.dm-sort:before {
+  content: "s";
+}
+
+.dm-sort-asc:before {
+  content: "t";
+}
+
+.dm-sort-desc:before {
+  content: "u";
+}
+
+.dm-angle-double-left:before {
+  content: "v";
+}
+
+.dm-angle-double-right:before {
+  content: "w";
+}
+
 /* -------------------------------------
 	Variables Setting
 ------------------------------------- */
@@ -84,6 +160,7 @@ a:hover {
 
 body,
 html {
+  background-color: #F7F6F4;
   height: 100%;
   font-family: "Metropolis-Regular", sans-serif;
   font-size: 14px;
@@ -101,7 +178,7 @@ html {
   clear: both;
 }
 
-.left {
+.left, .c-header .titleSect {
   float: left;
 }
 
@@ -117,11 +194,11 @@ html {
   float: none;
 }
 
-.absolute, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after {
+.absolute, .c-header .profileSect .profButton::before, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after {
   position: absolute;
 }
 
-.relative, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.relative, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .btn-filter .icon, .c-searchBody .sb_header .btn-filter, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   position: relative;
 }
 
@@ -141,11 +218,11 @@ html {
   visibility: hidden;
 }
 
-.block, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.block, .sb-tableContainer .sb-table.st-clean, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody .sb_header, .c-searchBody, .c-header .profileSect .profButton .p-subTitle, .c-header .profileSect .profButton .p-title, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header .titleSect, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .staticText, .sb-dropdown .dropdown-menu .optionList ul li, .sb-dropdown .dropdown-menu .optionList ul, .sb-dropdown .dropdown-menu .optionList, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   display: block;
 }
 
-.inlineblock, .loginLogo img, .c-link, .c-btn, .c-checkGroup .form-check-label .icon {
+.inlineblock, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button .icon, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .c-searchBody .sb_header .btn-filter .icon, .c-searchBody .sb_header .btn-filter, .c-header .profileSect .profButton::before, .loginLogo img, .sb-toggleSwich, .sb-dropdown, .c-link, .c-btn, .c-checkGroup .form-check-label .icon {
   display: inline-block;
 }
 
@@ -157,7 +234,7 @@ html {
   display: table;
 }
 
-.t-center, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .loginLogo, .c-btn {
+.t-center, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .c-searchBody .sb_header .btn-filter, .c-header .profileSect .profButton::before, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .loginLogo, .c-btn {
   text-align: center;
 }
 
@@ -217,15 +294,15 @@ html {
   font-size: 24px;
 }
 
-.valign-middle {
+.va-mid, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button .icon, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button {
   vertical-align: middle;
 }
 
-.height100 {
+.h100 {
   height: 100%;
 }
 
-.width100, .c-btn.lg {
+.w100, .c-header .profileSect .profButton, .c-btn.lg {
   width: 100%;
 }
 
@@ -235,6 +312,10 @@ html {
 
 .m30-btm {
   margin-bottom: 30px !important;
+}
+
+.m5-left {
+  margin-left: 5px;
 }
 
 /* ---------------------------------
@@ -297,6 +378,9 @@ html {
 .c-checkGroup .form-check-input {
   z-index: 1;
   opacity: 0;
+  position: relative;
+  top: -5px;
+  left: 3px;
 }
 .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after {
   content: "d";
@@ -372,6 +456,86 @@ html {
   align-items: center;
 }
 
+.sb-dropdown .btn {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #CAC9BE;
+  color: #303B50;
+  padding: 8px;
+  line-height: 17px;
+  height: 33px;
+  font-size: 14px;
+}
+.sb-dropdown .btn .icon {
+  color: #303B50;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 11px;
+  line-height: 9px;
+  margin-right: 3px;
+}
+.sb-dropdown .btn::after {
+  position: relative;
+  top: 2px;
+}
+.sb-dropdown .dropdown-menu {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 235px;
+}
+.sb-dropdown .dropdown-menu .optionList ul {
+  padding: 0;
+}
+.sb-dropdown .dropdown-menu .optionList ul li {
+  margin-bottom: 5px;
+}
+.sb-dropdown .dropdown-menu .optionList ul li .c-checkGroup .form-check-label {
+  color: #303B50;
+  font-size: 12px;
+  line-height: 14px;
+}
+.sb-dropdown .dropdown-menu .optionList ul li .c-checkGroup .icon {
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+}
+.sb-dropdown .dropdown-menu .title {
+  display: block;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 17px;
+}
+.sb-dropdown .dropdown-menu .title > span {
+  font-family: "Metropolis-SemiBold", sans-serif;
+  color: #303B50;
+  font-size: 14px;
+  line-height: 17px;
+  float: left;
+}
+.sb-dropdown .dropdown-menu .title > .reset {
+  background-color: transparent;
+  border: 0;
+  color: #F46120;
+  font-size: 12px;
+  line-height: 14px;
+  float: right;
+  outline: none;
+  padding: 0;
+}
+.sb-dropdown.xs .dropdown-menu {
+  min-width: 60px;
+  box-sizing: border-box;
+  width: 60px;
+}
+.sb-dropdown.lg .dropdown-menu {
+  left: -60px !important;
+}
+
+.staticText {
+  font-size: 14px;
+  line-height: 17px;
+}
+
 /* ------------------------------
 2. Login Container
 -------------------------------- */
@@ -405,6 +569,300 @@ html {
   line-height: 18px;
   margin: 0 0 40px;
   letter-spacing: 0.5px;
+}
+/* ------------------------------
+2. Sidebar
+-------------------------------- */
+.c-sidebar {
+  background-color: #192234;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+}
+.c-sidebar .sidebarLogo {
+  box-sizing: border-box;
+  border-bottom: 1px solid #1c2c49;
+  display: block;
+  height: 80px;
+  width: 80px;
+  padding: 20px;
+}
+.c-sidebar .sidebarNav {
+  display: block;
+  height: auto;
+  overflow: hidden;
+}
+.c-sidebar .sidebarNav ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.c-sidebar .sidebarNav ul li {
+  border-bottom: 1px solid #111C30;
+  display: block;
+  height: 80px;
+  width: 80px;
+}
+.c-sidebar .sidebarNav ul li .navItem {
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  border: 0;
+  border-right: 4px solid transparent;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  padding: 27px;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+.c-sidebar .sidebarNav ul li .navItem .icon {
+  height: 26px;
+  width: 26px;
+  color: #8E96A5;
+  display: inline-block;
+  font-size: 25px;
+  line-height: 37px;
+  vertical-align: middle;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+.c-sidebar .sidebarNav ul li .navItem:hover, .c-sidebar .sidebarNav ul li .navItem.st-active {
+  border-right-color: #F46120;
+  background-color: #111C30;
+}
+.c-sidebar .sidebarNav ul li .navItem:hover .icon, .c-sidebar .sidebarNav ul li .navItem.st-active .icon {
+  color: #ffffff;
+}
+
+/* ------------------------------
+3. Page Header
+-------------------------------- */
+.c-mainBody {
+  margin-left: 80px;
+  height: 100%;
+}
+
+.c-header {
+  background-color: #E0DFD5;
+  height: 73px;
+  height: auto;
+  overflow: hidden;
+}
+.c-header .titleSect {
+  border-right: 1px solid #CAC9BE;
+  box-sizing: border-box;
+  padding: 22px;
+  line-height: 29px;
+  width: calc(100% - 200px);
+}
+.c-header .titleSect .pageHeading {
+  font-family: "Metropolis-SemiBold", sans-serif;
+  color: #303B50;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+}
+.c-header .profileSect {
+  box-sizing: border-box;
+  height: 73px;
+  padding: 20px;
+  line-height: 33px;
+  width: 200px;
+  float: left;
+}
+.c-header .profileSect .profButton {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 0;
+  cursor: pointer;
+  padding: 0 20px 0 0;
+  text-align: right;
+  height: 33px;
+  outline: none;
+}
+.c-header .profileSect .profButton::before {
+  color: #303B50;
+  font-family: "demandmatrix";
+  content: "i";
+  top: 0;
+  right: 0;
+  height: 33px;
+  width: 16px;
+  background-color: #D5D4C8;
+  vertical-align: middle;
+  padding: 3px 0;
+  font-size: 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.c-header .profileSect .profButton .p-title {
+  color: #303B50;
+  font-family: "Metropolis-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+}
+.c-header .profileSect .profButton .p-subTitle {
+  color: #303B50;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.3px;
+}
+
+/* ------------------------------
+4. Search Body
+-------------------------------- */
+.c-searchBody .sb_header {
+  border-bottom: 1px solid #E0DFD5;
+  background-color: #ffffff;
+  padding: 12px 22px;
+}
+.c-searchBody .sb_header .filterLabel {
+  margin: 2px 0 1px;
+}
+.c-searchBody .sb_header .filterLabel .label {
+  color: rgba(48, 59, 80, 0.6);
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 2px;
+  letter-spacing: 0.4px;
+}
+.c-searchBody .sb_header .filterLabel .info {
+  color: #303B50;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.4px;
+}
+.c-searchBody .sb_header .filterLabel .info.lg {
+  font-family: "Metropolis-SemiBold", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.c-searchBody .sb_header .btn-filter {
+  background-color: #E0DFD5;
+  box-sizing: border-box;
+  border: 0;
+  color: #303B50;
+  height: 41px;
+  padding: 12px 24px;
+  line-height: 20px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  outline: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.c-searchBody .sb_header .btn-filter .icon {
+  color: #F46120;
+  font-size: 16px;
+  vertical-align: middle;
+  line-height: 10px;
+  top: -1px;
+}
+.c-searchBody .sb-searchTable {
+  padding: 22px;
+}
+
+.sb-tableContainer {
+  margin: 16px 0;
+}
+.sb-tableContainer .sb-table.st-clean .table {
+  border: 1px solid #E7E6DF;
+}
+.sb-tableContainer .sb-table.st-clean .table tr:nth-child(odd) {
+  background-color: #F0EFEA;
+}
+.sb-tableContainer .sb-table.st-clean .table tr:last-child td {
+  border-bottom: 0;
+}
+.sb-tableContainer .sb-table.st-clean .table tr th {
+  color: #303B50;
+  font-family: "Metropolis-SemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 12px 14px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #E0DFD5;
+  border-top: 0;
+  border-right: 1px solid #EEEEE8;
+}
+.sb-tableContainer .sb-table.st-clean .table tr th:last-child {
+  border-right: 0;
+}
+.sb-tableContainer .sb-table.st-clean .table tr th.sorting, .sb-tableContainer .sb-table.st-clean .table tr th.sorting_desc, .sb-tableContainer .sb-table.st-clean .table tr th.sorting_asc {
+  background-image: none;
+  position: relative;
+}
+.sb-tableContainer .sb-table.st-clean .table tr th.sorting::before, .sb-tableContainer .sb-table.st-clean .table tr th.sorting_desc::before, .sb-tableContainer .sb-table.st-clean .table tr th.sorting_asc::before {
+  font-family: "demandmatrix";
+  content: "s";
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  color: #303B50;
+  font-size: 12px;
+  line-height: 12px;
+}
+.sb-tableContainer .sb-table.st-clean .table tr th.sorting_desc::before {
+  content: "u";
+}
+.sb-tableContainer .sb-table.st-clean .table tr th.sorting_asc::before {
+  content: "t";
+}
+.sb-tableContainer .sb-table.st-clean .table tr td {
+  border-right: 1px solid #E7E7DF;
+  border-bottom: 1px solid #E7E7DF;
+  border-top: 0;
+  color: #303B50;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 12px 14px;
+}
+.sb-tableContainer .sb-table.st-clean .table tr td:last-child {
+  border-right: 0;
+}
+.sb-tableContainer .sb-table.st-clean .dataTables_info {
+  color: rgba(48, 59, 80, 0.5);
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 12px;
+}
+.sb-tableContainer .sb-table.st-clean .dataTables_paginate {
+  margin-top: 12px;
+}
+.sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button {
+  color: #303B50 !important;
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  background: none;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 6px 8px;
+  line-height: 18px;
+  font-size: 14px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button .icon {
+  font-size: 14px;
+  line-height: 12px;
+}
+.sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button.current {
+  background-color: #ffffff;
+  border-color: #F46120;
 }
 
 /*# sourceMappingURL=demandmatrix-style.css.map */

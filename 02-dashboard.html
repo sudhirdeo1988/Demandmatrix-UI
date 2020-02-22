@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemandMatrix :: Dashboard</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/datatables.min.css" />
+    <link rel="stylesheet" href="./css/demandmatrix-style.css" />
+  </head>
+  <body>
+    <!-- ********** Component :: Sidebar **********  -->
+    <div class="c-sidebar">
+      <div class="sidebarLogo">
+        <img src="./images/logo_square.png" alt="image" />
+      </div>
+      <div class="sidebarNav">
+        <ul>
+          <li>
+            <button class="navItem">
+              <i class="icon dm dm-icon-dashboard"></i>
+            </button>
+          </li>
+          <li>
+            <button class="navItem st-active">
+              <i class="icon dm dm-icon-technology"></i>
+            </button>
+          </li>
+          <li>
+            <button class="navItem">
+              <i class="icon dm dm-icon-aut"></i>
+            </button>
+          </li>
+          <li>
+            <button class="navItem">
+              <i class="icon dm dm-icon-adoption"></i>
+            </button>
+          </li>
+          <li>
+            <button class="navItem">
+              <i class="icon dm dm-icon-ntp"></i>
+            </button>
+          </li>
+          <li>
+            <button class="navItem">
+              <i class="icon dm dm-icon-trending"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ********** Component :: Sidebar End **********  -->
+
+    <!-- ********** Component :: Main Body **********  -->
+    <div class="c-mainBody">
+      <!-- **** Component :: Header ****  -->
+      <div class="c-header">
+        <!-- ** Header Title ** -->
+        <div class="titleSect">
+          <h1 class="pageHeading">Technology Profile</h1>
+        </div>
+        <!-- ** Header Title End ** -->
+
+        <!-- ** Header UserProf ** -->
+        <div class="profileSect">
+          <button class="profButton">
+            <span class="p-title">Gunther Ackner</span>
+            <span class="p-subTitle">Oak Microsystems</span>
+          </button>
+        </div>
+        <!-- ** Header UserProf End ** -->
+      </div>
+      <!-- **** Component :: Header End ****  -->
+
+      <!-- **** Search Body **** -->
+      <div class="c-searchBody">
+        <!-- ** Header ** -->
+        <div class="sb_header">
+          <div class="row">
+            <div class="col-4">
+              <div class="filterLabel">
+                <span class="label">Product</span>
+                <span class="info lg">MICROSOFT OFFICE</span>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="filterLabel">
+                <span class="label">Filters</span>
+                <span class="info">No Filters selected.</span>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="filterLabel">
+                <span class="label">Results</span>
+                <span class="info">150 Companies</span>
+              </div>
+            </div>
+
+            <div class="col-2 t-right">
+              <button class="btn-filter">
+                <i class="icon dm-filter"></i>
+                Filter Data
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- ** Header End ** -->
+
+        <!-- ** Table ** -->
+        <div class="sb-searchTable">
+          <!-- ** Table Filter Top ** -->
+          <div class="filterSect">
+            <div class="row">
+              <div class="col">
+                <!-- ** Dropdown ** -->
+                <div class="dropdown sb-dropdown xs">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    1
+                  </button>
+                  <div
+                    class="dropdown-menu dropdown-menu-lg-right"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <button class="dropdown-item" type="button">1</button>
+                    <button class="dropdown-item" type="button">2</button>
+                    <button class="dropdown-item" type="button">3</button>
+                  </div>
+                </div>
+                <!-- ** Dropdown ** -->
+                <div class="staticText inlineblock m5-left">
+                  Companies per page
+                </div>
+              </div>
+
+              <!-- ** Dropdown ** -->
+              <div class="col t-right">
+                <!-- ** Dropdown ** -->
+                <div class="dropdown sb-dropdown lg">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="icon dm-spreadsheet"></i>
+                    Columns
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <div class="title">
+                      <span>Displayed Columns</span>
+                      <button class="reset">Reset</button>
+                    </div>
+                    <div class="optionList">
+                      <ul>
+                        <li>
+                          <div class="form-check c-checkGroup">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="c1"
+                              value="1"
+                            />
+                            <label
+                              class="form-check-label"
+                              role="button"
+                              for="c1"
+                            >
+                              <i class="icon"></i>
+                              Remember Me
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check c-checkGroup">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="c1"
+                              value="1"
+                            />
+                            <label
+                              class="form-check-label"
+                              role="button"
+                              for="c1"
+                            >
+                              <i class="icon"></i>
+                              Remember Me
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check c-checkGroup">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="c1"
+                              value="1"
+                            />
+                            <label
+                              class="form-check-label"
+                              role="button"
+                              for="c1"
+                            >
+                              <i class="icon"></i>
+                              Remember Me
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ** Dropdown ** -->
+
+                <!-- ** Switch ** -->
+                <div class="sb-toggleSwich">
+                  toggle
+                </div>
+                <!-- ** Switch End ** -->
+              </div>
+              <!-- ** Dropdown End ** -->
+            </div>
+          </div>
+          <!-- ** Table Filter Top End ** -->
+
+          <!-- ** Table Container ** -->
+          <div class="sb-tableContainer">
+            <div class="sb-table st-clean">
+              <table class="table js-dataTable">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;" class="sorting">Company</th>
+                    <th style="width: 10%;" class="no-sort">Employee Size</th>
+                    <th style="width: 15%;">Revenue</th>
+                    <th style="width: 10%;" class="no-sort">First Round</th>
+                    <th style="width: 10%;" class="no-sort">Last Round</th>
+                    <th style="width: 10%;" class="no-sort">Intensity</th>
+                    <th style="width: 10%;" class="no-sort">Country</th>
+                    <th style="width: 15%;" class="no-sort">Industry</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1M Codefinder</td>
+                    <td>200-500</td>
+                    <td>$14,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>2M Codefinder</td>
+                    <td>100-400</td>
+                    <td>$35,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>3M Codefinder</td>
+                    <td>200-500</td>
+                    <td>$4,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>1M Codefinder</td>
+                    <td>200-500</td>
+                    <td>$14,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>2M Codefinder</td>
+                    <td>100-400</td>
+                    <td>$35,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>3M Codefinder</td>
+                    <td>200-500</td>
+                    <td>$4,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- ** Table Container End ** -->
+
+        </div>
+        <!-- ** Table End ** -->
+      </div>
+      <!-- **** Search Body End **** -->
+    </div>
+    <!-- ********** Component :: Main Body End **********  -->
+
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/datatables.min.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </body>
+</html>
