@@ -526,6 +526,11 @@ html {
   min-width: 60px;
   box-sizing: border-box;
   width: 60px;
+  padding: 0;
+}
+.sb-dropdown.xs .dropdown-menu .dropdown-item {
+  padding: 10px;
+  text-align: center;
 }
 .sb-dropdown.lg .dropdown-menu {
   left: -60px !important;
@@ -698,7 +703,7 @@ html {
   color: #303B50;
   font-family: "demandmatrix";
   content: "i";
-  top: 0;
+  top: -3px;
   right: 0;
   height: 33px;
   width: 16px;

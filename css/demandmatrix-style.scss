@@ -270,6 +270,12 @@
       min-width: 60px;
       box-sizing: border-box;
       width: 60px;
+      padding: 0;
+
+        .dropdown-item{
+          padding: 10px;
+          text-align: center;
+        }
     }
   }
   &.lg {
@@ -478,7 +484,7 @@
         color: $textColor;
         font-family: "demandmatrix";
         content: "\69";
-        top: 0;
+        top: -3px;
         right: 0;
         height: 33px;
         width: 16px;
