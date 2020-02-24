@@ -3,6 +3,10 @@ $(function() {
     return false;
   });
 
+  if ($(".js-serchSelect").length) {
+    $('.js-serchSelect').select2();
+  }
+
   /* ------ Data Table --------- */
   if ($(".js-dataTable").length) {
     $(".js-dataTable").DataTable({

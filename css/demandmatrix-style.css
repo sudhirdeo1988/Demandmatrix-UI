@@ -160,13 +160,13 @@ a:hover {
 
 body,
 html {
-  background-color: #F7F6F4;
+  background-color: #f7f6f4;
   height: 100%;
   font-family: "Metropolis-Regular", sans-serif;
   font-size: 14px;
   line-height: 24px;
   vertical-align: baseline;
-  color: #303B50;
+  color: #303b50;
   margin: 0;
   padding: 0;
 }
@@ -198,7 +198,7 @@ html {
   position: absolute;
 }
 
-.relative, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .btn-filter .icon, .c-searchBody .sb_header .btn-filter, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.relative, .sb-multiselect .select2-container, .sb-filterBody .filterRight, .sb-filterBody .filterLeft, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .btn-filter .icon, .c-searchBody .sb_header .btn-filter, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .sb-dropdown.st-fluid .btn, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   position: relative;
 }
 
@@ -218,7 +218,7 @@ html {
   visibility: hidden;
 }
 
-.block, .sb-tableContainer .sb-table.st-clean, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody .sb_header, .c-searchBody, .c-header .profileSect .profButton .p-subTitle, .c-header .profileSect .profButton .p-title, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header .titleSect, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .staticText, .sb-dropdown .dropdown-menu .optionList ul li, .sb-dropdown .dropdown-menu .optionList ul, .sb-dropdown .dropdown-menu .optionList, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.block, .sb-multiselect .select2-container, .sb-filterBody .f_text, .sb-filterBody .f_title, .sb-tableContainer .sb-table.st-clean, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody .sb_header, .c-searchBody, .c-header .profileSect .profButton .p-subTitle, .c-header .profileSect .profButton .p-title, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header .titleSect, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .staticText, .sb-dropdown.st-fluid .btn, .sb-dropdown.st-fluid, .sb-dropdown .dropdown-menu .optionList ul li, .sb-dropdown .dropdown-menu .optionList ul, .sb-dropdown .dropdown-menu .optionList, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   display: block;
 }
 
@@ -238,7 +238,7 @@ html {
   text-align: center;
 }
 
-.t-left {
+.t-left, .sb-dropdown.st-fluid .btn {
   text-align: left;
 }
 
@@ -246,7 +246,7 @@ html {
   text-align: right;
 }
 
-.bold {
+.bold, .sb-filterBody .f_title {
   font-family: "Metropolis-SemiBold", sans-serif;
 }
 
@@ -302,12 +302,16 @@ html {
   height: 100%;
 }
 
-.w100, .c-header .profileSect .profButton, .c-btn.lg {
+.w100, .sb-multiselect .select2-container, .c-header .profileSect .profButton, .sb-dropdown.st-fluid .btn, .c-btn.lg {
   width: 100%;
 }
 
 .m15-btm {
   margin-bottom: 15px !important;
+}
+
+.m25-btm {
+  margin-bottom: 25px !important;
 }
 
 .m30-btm {
@@ -316,6 +320,14 @@ html {
 
 .m5-left {
   margin-left: 5px;
+}
+
+.pad0 {
+  padding: 0 !important;
+}
+
+.m0 {
+  margin: 0 !important;
 }
 
 /* ---------------------------------
@@ -333,7 +345,7 @@ html {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.5px;
-  color: #303B50;
+  color: #303b50;
   outline: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -367,7 +379,7 @@ html {
   content: "";
 }
 .c-formGroup.st-password .showPass::before {
-  color: #303B50;
+  color: #303b50;
   font-size: 18px;
   content: "b";
 }
@@ -384,7 +396,7 @@ html {
 }
 .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after {
   content: "d";
-  color: #F46120;
+  color: #f46120;
   left: 3px;
   top: 1px;
   font-size: 12px;
@@ -392,7 +404,7 @@ html {
 }
 .c-checkGroup .form-check-label {
   cursor: pointer;
-  color: #303B50;
+  color: #303b50;
   top: 0;
   left: 0;
   padding: 0;
@@ -428,7 +440,7 @@ html {
 
 .c-btn {
   color: #ffffff;
-  background-color: #F46120;
+  background-color: #f46120;
   padding: 12px 12px 11px;
   font-size: 14px;
   line-height: 16px;
@@ -438,7 +450,7 @@ html {
 .c-link {
   background-color: transparent;
   border: 0;
-  color: #F46120;
+  color: #f46120;
   cursor: pointer;
   font-size: 12px;
   line-height: 14px;
@@ -456,18 +468,19 @@ html {
   align-items: center;
 }
 
+/* ----------------- Dropdown ---------------- */
 .sb-dropdown .btn {
   box-sizing: border-box;
   background-color: #ffffff;
   border: 1px solid #cac9be;
-  color: #303B50;
+  color: #303b50;
   padding: 8px;
   line-height: 17px;
   height: 33px;
   font-size: 14px;
 }
 .sb-dropdown .btn .icon {
-  color: #303B50;
+  color: #303b50;
   display: inline-block;
   vertical-align: middle;
   font-size: 11px;
@@ -490,7 +503,7 @@ html {
   margin-bottom: 5px;
 }
 .sb-dropdown .dropdown-menu .optionList ul li .c-checkGroup .form-check-label {
-  color: #303B50;
+  color: #303b50;
   font-size: 12px;
   line-height: 14px;
 }
@@ -507,7 +520,7 @@ html {
 }
 .sb-dropdown .dropdown-menu .title > span {
   font-family: "Metropolis-SemiBold", sans-serif;
-  color: #303B50;
+  color: #303b50;
   font-size: 14px;
   line-height: 17px;
   float: left;
@@ -515,7 +528,7 @@ html {
 .sb-dropdown .dropdown-menu .title > .reset {
   background-color: transparent;
   border: 0;
-  color: #F46120;
+  color: #f46120;
   font-size: 12px;
   line-height: 14px;
   float: right;
@@ -534,6 +547,26 @@ html {
 }
 .sb-dropdown.lg .dropdown-menu {
   left: -60px !important;
+}
+.sb-dropdown.st-fluid .dropdown-menu {
+  min-width: 250px;
+  width: auto;
+  padding: 0;
+}
+.sb-dropdown.st-fluid .dropdown-menu .dropdown-item {
+  text-align: left;
+  padding: 6px 10px;
+}
+.sb-dropdown.st-fluid .btn {
+  color: #303b50;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 17px;
+}
+.sb-dropdown.st-fluid .btn::after {
+  position: absolute;
+  right: 10px;
+  top: 14px;
 }
 
 .sb-toggleSwich {
@@ -646,7 +679,7 @@ html {
   -ms-transition: all ease 0.3s;
 }
 .c-sidebar .sidebarNav ul li .navItem:hover, .c-sidebar .sidebarNav ul li .navItem.st-active {
-  border-right-color: #F46120;
+  border-right-color: #f46120;
   background-color: #111c30;
 }
 .c-sidebar .sidebarNav ul li .navItem:hover .icon, .c-sidebar .sidebarNav ul li .navItem.st-active .icon {
@@ -676,7 +709,7 @@ html {
 }
 .c-header .titleSect .pageHeading {
   font-family: "Metropolis-SemiBold", sans-serif;
-  color: #303B50;
+  color: #303b50;
   font-size: 24px;
   line-height: 29px;
   margin: 0;
@@ -700,7 +733,7 @@ html {
   outline: none;
 }
 .c-header .profileSect .profButton::before {
-  color: #303B50;
+  color: #303b50;
   font-family: "demandmatrix";
   content: "i";
   top: -3px;
@@ -716,13 +749,13 @@ html {
   border-radius: 2px;
 }
 .c-header .profileSect .profButton .p-title {
-  color: #303B50;
+  color: #303b50;
   font-family: "Metropolis-SemiBold", sans-serif;
   font-size: 16px;
   line-height: 19px;
 }
 .c-header .profileSect .profButton .p-subTitle {
-  color: #303B50;
+  color: #303b50;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.3px;
@@ -747,7 +780,7 @@ html {
   letter-spacing: 0.4px;
 }
 .c-searchBody .sb_header .filterLabel .info {
-  color: #303B50;
+  color: #303b50;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.4px;
@@ -762,7 +795,7 @@ html {
   background-color: #e0dfd5;
   box-sizing: border-box;
   border: 0;
-  color: #303B50;
+  color: #303b50;
   height: 41px;
   padding: 12px 24px;
   line-height: 20px;
@@ -774,7 +807,7 @@ html {
   border-radius: 4px;
 }
 .c-searchBody .sb_header .btn-filter .icon {
-  color: #F46120;
+  color: #f46120;
   font-size: 16px;
   vertical-align: middle;
   line-height: 10px;
@@ -797,7 +830,7 @@ html {
   border-bottom: 0;
 }
 .sb-tableContainer .sb-table.st-clean .table tr th {
-  color: #303B50;
+  color: #303b50;
   font-family: "Metropolis-SemiBold", sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -820,7 +853,7 @@ html {
   position: absolute;
   top: 15px;
   right: 5px;
-  color: #303B50;
+  color: #303b50;
   font-size: 12px;
   line-height: 12px;
 }
@@ -834,7 +867,7 @@ html {
   border-right: 1px solid #E7E7DF;
   border-bottom: 1px solid #E7E7DF;
   border-top: 0;
-  color: #303B50;
+  color: #303b50;
   font-size: 14px;
   line-height: 17px;
   padding: 12px 14px;
@@ -852,7 +885,7 @@ html {
   margin-top: 12px;
 }
 .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button {
-  color: #303B50 !important;
+  color: #303b50 !important;
   box-sizing: border-box;
   height: 30px;
   width: 30px;
@@ -872,7 +905,53 @@ html {
 }
 .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button.current {
   background-color: #ffffff;
-  border-color: #F46120;
+  border-color: #f46120;
+}
+
+.sb-filterBody .filterLeft {
+  border-right: 1px solid #e0dfd5;
+  padding: 22px;
+}
+.sb-filterBody .filterRight {
+  background-color: #F6F6F3;
+  margin-left: -1px;
+  border-left: 1px solid #e0dfd5;
+  padding: 0 0 22px;
+}
+.sb-filterBody .filterRight .titleBlock {
+  padding: 22px 16px 0 16px;
+}
+.sb-filterBody .filterRight .infoBlock {
+  border-bottom: 1px solid #e0dfd5;
+  padding: 11px 16px;
+}
+.sb-filterBody .filterRight .infoBlock .b_label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+}
+.sb-filterBody .f_title {
+  color: #303b50;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 0 12px;
+}
+.sb-filterBody .f_text {
+  color: rgba(48, 59, 80, 0.7);
+  font-size: 14px;
+  line-height: 19px;
+  margin: 0 0 12px;
+}
+
+.sb-modal.st-filter .modal-dialog {
+  max-width: calc(100% - 152px);
+}
+
+/* ------ Multiselect --------------- */
+.sb-multiselect .select2-container {
+  padding-right: 30px;
 }
 
 /* ------ Toggle Switch --------------- */
@@ -886,6 +965,10 @@ html {
 .can-toggle input[type=checkbox]:checked ~ label .can-toggle__switch:before {
   content: attr(data-unchecked);
   left: -115px;
+}
+
+.can-toggle.sm input[type=checkbox]:checked ~ label .can-toggle__switch:before {
+  left: -95px;
 }
 
 .can-toggle input[type=checkbox]:checked ~ label .can-toggle__switch:after {
@@ -912,7 +995,7 @@ html {
 }
 
 .can-toggle label .can-toggle__switch:before {
-  color: #303B50;
+  color: #303b50;
 }
 
 .can-toggle label .can-toggle__switch:after {
@@ -927,11 +1010,20 @@ html {
   transform: translate3d(104px, 0, 0);
 }
 
+.can-toggle.sm input[type=checkbox]:checked ~ label .can-toggle__switch:after {
+  -webkit-transform: translate3d(80px, 0, 0);
+  transform: translate3d(80px, 0, 0);
+}
+
 .can-toggle label .can-toggle__switch {
   height: 32px;
   display: inline-block;
   width: 210px;
   border-radius: 4px;
+}
+
+.can-toggle.sm label .can-toggle__switch {
+  width: 160px;
 }
 
 .can-toggle label .can-toggle__switch:before {
