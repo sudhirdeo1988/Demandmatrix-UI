@@ -7,6 +7,12 @@ $(function() {
     $('.js-serchSelect').select2();
   }
 
+  $('.js-datepicker input').datepicker({
+    weekStart: 1,
+    autoclose: true
+  });
+
+
   /* ------ Data Table --------- */
   if ($(".js-dataTable").length) {
     $(".js-dataTable").DataTable({

@@ -38,6 +38,24 @@
     }
   }
 
+  &.js-datepicker{
+    .form-control{
+      padding-right: 30px;
+    }
+    &::after{
+      font-family: "demandmatrix";
+      content: "\78";
+      position: absolute;
+      height: 15px;
+      width: 15px;
+      top: 10px;
+      right: 9px;
+      font-size: 14px;
+      line-height: 18px;
+      color: $textColor;
+    }
+  }
+
   &.st-password {
     .form-control {
       padding-right: 40px;
@@ -153,6 +171,11 @@
   @extend .noborder;
   @extend .borderBx;
   @extend .t-center;
+
+  &.gray{
+    color: $textColor;
+    background-color: #F6F6F3;
+  }
 
   &.lg {
     @extend .block;
@@ -758,6 +781,7 @@
     margin-left: -1px;
     border-left: 1px solid #e0dfd5;
     padding: 0;
+    border-radius: 0 .3rem 0 0;
     @extend .relative;
 
     .titleBlock {
@@ -804,6 +828,28 @@
   &.st-filter {
     .modal-dialog {
       max-width: calc(100% - 152px);
+    }
+  }
+
+  /* -- Modal Footer -- */
+  .modalFooter{
+    border-top: 1px solid #E0DFD5;
+    padding: 12px 22px;
+
+    .filterLabel{
+      .label{
+        font-size: 12px;
+        line-height: 14px;
+        color: lighten($color: $textColor, $amount: 60%);
+        @extend .block;
+      }
+      .info{
+        font-size: 18px;
+        line-height: 22px;
+        color: $textColor;
+        font-family: $font-semiBold;
+        @extend .block;
+      }
     }
   }
 }
