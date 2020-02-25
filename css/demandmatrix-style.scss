@@ -289,14 +289,14 @@
   &.st-fluid {
     @extend .block;
 
-    .dropdown-menu{
+    .dropdown-menu {
       min-width: 250px;
       width: auto;
       padding: 0;
-        .dropdown-item{
-          text-align: left;
-          padding: 6px 10px;
-        }
+      .dropdown-item {
+        text-align: left;
+        padding: 6px 10px;
+      }
     }
 
     .btn {
@@ -622,6 +622,10 @@
   }
 }
 
+
+/* ------------------------------
+4. Table Container
+-------------------------------- */
 .sb-tableContainer {
   margin: 16px 0;
   @extend .block;
@@ -740,6 +744,9 @@
   }
 }
 
+/* ------------------------------
+6. Filter Body
+-------------------------------- */
 .sb-filterBody {
   .filterLeft {
     border-right: 1px solid #e0dfd5;
@@ -747,27 +754,35 @@
     @extend .relative;
   }
   .filterRight {
-    background-color: #F6F6F3;
+    background-color: #f6f6f3;
     margin-left: -1px;
     border-left: 1px solid #e0dfd5;
-    padding: 0 0 22px;
+    padding: 0;
     @extend .relative;
 
-      .titleBlock{
-        padding: 22px 16px 0 16px;
-      }
-      .infoBlock{
-        border-bottom: 1px solid #e0dfd5;
-        padding: 11px 16px;
+    .titleBlock {
+      padding: 22px 16px 0 16px;
+    }
+    .infoBlock {
+      box-sizing: border-box;
+      border-bottom: 1px solid #e0dfd5;
+      padding: 11px 16px;
+      min-height: 60px;
 
-          .b_label{
-            display: block;
-            text-align: left;
-            font-size: 12px;
-            line-height: 16px;
-            margin: 0;
-          }
+      &:last-child{
+        border: 0;
       }
+
+      .b_label {
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0;
+        top: 11px;
+        @extend .relative;
+        @extend .block;
+        @extend .t-left;
+      }
+    }
   }
   .f_title {
     color: $textColor;
@@ -793,17 +808,61 @@
   }
 }
 
-/* ------ Multiselect --------------- */
-.sb-multiselect{
-  .select2-container{
-    padding-right: 30px;
+/* ------------------------------
+8. Multi Select
+-------------------------------- */
+.sb-multiselect {
+  .select2-container {
     @extend .block;
     @extend .w100;
     @extend .relative;
+
+    &::before {
+      font-family: "demandmatrix";
+      content: "\75";
+      position: absolute;
+      top: 11px;
+      right: 5px;
+      font-size: 10px;
+      line-height: 10px;
+      color: $textColor;
+      z-index: 3;
+    }
+
+    .select2-selection {
+      box-sizing: border-box;
+      border: 1px solid #cac9be;
+      height: 38px;
+      position: relative;
+
+      &.select2-selection--single{
+        .select2-selection__rendered{
+          line-height: 36px;
+        }
+        .select2-selection__arrow{
+          display: none;
+        }
+      }
+
+      .select2-selection__choice{
+        background-color: #E0DFD5;
+        font-size: 13px;
+        line-height: 16px;
+        padding: 6px 5px 3px;
+        @include rounded-corners(2px);
+
+          .select2-selection__choice__remove{
+            float: right;
+            margin: 0 0 0 5px;
+          }
+      }
+    }
   }
 }
 
-/* ------ Toggle Switch --------------- */
+/* ------------------------------
+9. Toggle Switch
+-------------------------------- */
 .can-toggle input[type="checkbox"] {
   opacity: 0;
   position: absolute;

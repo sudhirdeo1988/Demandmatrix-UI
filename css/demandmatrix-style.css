@@ -198,7 +198,7 @@ html {
   position: absolute;
 }
 
-.relative, .sb-multiselect .select2-container, .sb-filterBody .filterRight, .sb-filterBody .filterLeft, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .btn-filter .icon, .c-searchBody .sb_header .btn-filter, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .sb-dropdown.st-fluid .btn, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.relative, .sb-multiselect .select2-container, .sb-filterBody .filterRight .infoBlock .b_label, .sb-filterBody .filterRight, .sb-filterBody .filterLeft, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .btn-filter .icon, .c-searchBody .sb_header .btn-filter, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .sb-dropdown.st-fluid .btn, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   position: relative;
 }
 
@@ -218,7 +218,7 @@ html {
   visibility: hidden;
 }
 
-.block, .sb-multiselect .select2-container, .sb-filterBody .f_text, .sb-filterBody .f_title, .sb-tableContainer .sb-table.st-clean, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody .sb_header, .c-searchBody, .c-header .profileSect .profButton .p-subTitle, .c-header .profileSect .profButton .p-title, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header .titleSect, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .staticText, .sb-dropdown.st-fluid .btn, .sb-dropdown.st-fluid, .sb-dropdown .dropdown-menu .optionList ul li, .sb-dropdown .dropdown-menu .optionList ul, .sb-dropdown .dropdown-menu .optionList, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.block, .sb-multiselect .select2-container, .sb-filterBody .f_text, .sb-filterBody .f_title, .sb-filterBody .filterRight .infoBlock .b_label, .sb-tableContainer .sb-table.st-clean, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody .sb_header, .c-searchBody, .c-header .profileSect .profButton .p-subTitle, .c-header .profileSect .profButton .p-title, .c-header .profileSect .profButton, .c-header .titleSect .pageHeading, .c-header .titleSect, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .staticText, .sb-dropdown.st-fluid .btn, .sb-dropdown.st-fluid, .sb-dropdown .dropdown-menu .optionList ul li, .sb-dropdown .dropdown-menu .optionList ul, .sb-dropdown .dropdown-menu .optionList, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   display: block;
 }
 
@@ -238,7 +238,7 @@ html {
   text-align: center;
 }
 
-.t-left, .sb-dropdown.st-fluid .btn {
+.t-left, .sb-filterBody .filterRight .infoBlock .b_label, .sb-dropdown.st-fluid .btn {
   text-align: left;
 }
 
@@ -817,6 +817,9 @@ html {
   padding: 22px;
 }
 
+/* ------------------------------
+4. Table Container
+-------------------------------- */
 .sb-tableContainer {
   margin: 16px 0;
 }
@@ -908,29 +911,36 @@ html {
   border-color: #f46120;
 }
 
+/* ------------------------------
+6. Filter Body
+-------------------------------- */
 .sb-filterBody .filterLeft {
   border-right: 1px solid #e0dfd5;
   padding: 22px;
 }
 .sb-filterBody .filterRight {
-  background-color: #F6F6F3;
+  background-color: #f6f6f3;
   margin-left: -1px;
   border-left: 1px solid #e0dfd5;
-  padding: 0 0 22px;
+  padding: 0;
 }
 .sb-filterBody .filterRight .titleBlock {
   padding: 22px 16px 0 16px;
 }
 .sb-filterBody .filterRight .infoBlock {
+  box-sizing: border-box;
   border-bottom: 1px solid #e0dfd5;
   padding: 11px 16px;
+  min-height: 60px;
+}
+.sb-filterBody .filterRight .infoBlock:last-child {
+  border: 0;
 }
 .sb-filterBody .filterRight .infoBlock .b_label {
-  display: block;
-  text-align: left;
   font-size: 12px;
   line-height: 16px;
   margin: 0;
+  top: 11px;
 }
 .sb-filterBody .f_title {
   color: #303b50;
@@ -949,12 +959,49 @@ html {
   max-width: calc(100% - 152px);
 }
 
-/* ------ Multiselect --------------- */
-.sb-multiselect .select2-container {
-  padding-right: 30px;
+/* ------------------------------
+8. Multi Select
+-------------------------------- */
+.sb-multiselect .select2-container::before {
+  font-family: "demandmatrix";
+  content: "u";
+  position: absolute;
+  top: 11px;
+  right: 5px;
+  font-size: 10px;
+  line-height: 10px;
+  color: #303b50;
+  z-index: 3;
+}
+.sb-multiselect .select2-container .select2-selection {
+  box-sizing: border-box;
+  border: 1px solid #cac9be;
+  height: 38px;
+  position: relative;
+}
+.sb-multiselect .select2-container .select2-selection.select2-selection--single .select2-selection__rendered {
+  line-height: 36px;
+}
+.sb-multiselect .select2-container .select2-selection.select2-selection--single .select2-selection__arrow {
+  display: none;
+}
+.sb-multiselect .select2-container .select2-selection .select2-selection__choice {
+  background-color: #E0DFD5;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 6px 5px 3px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.sb-multiselect .select2-container .select2-selection .select2-selection__choice .select2-selection__choice__remove {
+  float: right;
+  margin: 0 0 0 5px;
 }
 
-/* ------ Toggle Switch --------------- */
+/* ------------------------------
+9. Toggle Switch
+-------------------------------- */
 .can-toggle input[type=checkbox] {
   opacity: 0;
   position: absolute;
