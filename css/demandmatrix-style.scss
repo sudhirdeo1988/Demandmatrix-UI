@@ -420,10 +420,16 @@
   .sidebarLogo {
     box-sizing: border-box;
     border-bottom: 1px solid #1c2c49;
-    display: block;
     height: 80px;
     width: 80px;
     padding: 20px;
+    @extend .block;
+
+      img{
+        height: 40px;
+        width: 40px;
+        @extend .block;
+      }
   }
 
   .sidebarNav {
