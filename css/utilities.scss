@@ -140,7 +140,18 @@
 .dm-calendar:before {
   content: "\78";
 }
-
+.dm-arrow-up-c:before {
+  content: "\79";
+}
+.dm-arrow-down-c:before {
+  content: "\7a";
+}
+.dm-directions:before {
+  content: "\41";
+}
+.dm-minus:before {
+  content: "\42";
+}
 
 /* -------------------------------------
 	Variables Setting
