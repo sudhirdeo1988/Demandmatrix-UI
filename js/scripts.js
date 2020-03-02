@@ -4,14 +4,15 @@ $(function() {
   });
 
   if ($(".js-serchSelect").length) {
-    $('.js-serchSelect').select2();
+    $(".js-serchSelect").select2();
   }
 
-  $('.js-datepicker input').datepicker({
-    weekStart: 1,
-    autoclose: true
-  });
-
+  if ($(".js-datepicker").length) {
+    $(".js-datepicker input").datepicker({
+      weekStart: 1,
+      autoclose: true
+    });
+  }
 
   /* ------ Data Table --------- */
   if ($(".js-dataTable").length) {
@@ -21,9 +22,9 @@ $(function() {
       searching: false,
       lengthChange: false,
       pageLength: 25,
-      columnDefs: [
-        { targets: 'no-sort', orderable: false }
-      ],
+      "scrollY": "200px",
+      "scrollCollapse": true,
+      columnDefs: [{ targets: "no-sort", orderable: false }],
       oLanguage: {
         oPaginate: {
           sNext: '<i class="icon dm-angle-right"></i>',

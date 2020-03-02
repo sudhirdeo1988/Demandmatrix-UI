@@ -344,6 +344,7 @@
 .sb-toggleSwich {
   vertical-align: middle;
   height: 32px;
+  margin-left: 5px;
   @extend .inlineblock;
   @extend .relative;
 }
@@ -680,8 +681,9 @@
             font-family: $font-semiBold;
             font-size: 14px;
             line-height: 17px;
-            padding: 12px 14px;
+            padding: 10px 16px 10px 8px;
             background-color: $white;
+            vertical-align: top;
             border-bottom: 2px solid #e0dfd5;
             border-top: 0;
             border-right: 1px solid#EEEEE8;
@@ -699,7 +701,7 @@
                 font-family: "demandmatrix";
                 content: "\73";
                 position: absolute;
-                top: 15px;
+                top: 12px;
                 right: 5px;
                 color: $textColor;
                 font-size: 12px;
@@ -723,8 +725,9 @@
             border-top: 0;
             color: $textColor;
             font-size: 14px;
-            line-height: 17px;
-            padding: 12px 14px;
+            line-height: 18px;
+            padding: 8px;
+            vertical-align: top;
 
             &:last-child {
               border-right: 0;
@@ -767,6 +770,15 @@
             background-color: $white;
             border-color: $secondaryColor;
           }
+        }
+      }
+    }
+
+    .dataTables_scrollBody{
+      @extend .noborder;
+      th{
+        &::before{
+          display: none;
         }
       }
     }

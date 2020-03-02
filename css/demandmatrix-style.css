@@ -151,6 +151,22 @@
   content: "x";
 }
 
+.dm-arrow-up-c:before {
+  content: "y";
+}
+
+.dm-arrow-down-c:before {
+  content: "z";
+}
+
+.dm-directions:before {
+  content: "A";
+}
+
+.dm-minus:before {
+  content: "B";
+}
+
 /* -------------------------------------
 	Variables Setting
 ------------------------------------- */
@@ -206,7 +222,7 @@ html {
   position: relative;
 }
 
-.noborder, .c-btn {
+.noborder, .sb-tableContainer .sb-table .dataTables_scrollBody, .c-btn {
   border: 0 none;
 }
 
@@ -595,6 +611,7 @@ html {
 .sb-toggleSwich {
   vertical-align: middle;
   height: 32px;
+  margin-left: 5px;
 }
 
 .staticText {
@@ -863,8 +880,9 @@ html {
   font-family: "Metropolis-SemiBold", sans-serif;
   font-size: 14px;
   line-height: 17px;
-  padding: 12px 14px;
+  padding: 10px 16px 10px 8px;
   background-color: #ffffff;
+  vertical-align: top;
   border-bottom: 2px solid #e0dfd5;
   border-top: 0;
   border-right: 1px solid #EEEEE8;
@@ -880,7 +898,7 @@ html {
   font-family: "demandmatrix";
   content: "s";
   position: absolute;
-  top: 15px;
+  top: 12px;
   right: 5px;
   color: #303b50;
   font-size: 12px;
@@ -898,8 +916,9 @@ html {
   border-top: 0;
   color: #303b50;
   font-size: 14px;
-  line-height: 17px;
-  padding: 12px 14px;
+  line-height: 18px;
+  padding: 8px;
+  vertical-align: top;
 }
 .sb-tableContainer .sb-table.st-clean .table tr td:last-child {
   border-right: 0;
@@ -935,6 +954,9 @@ html {
 .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button.current {
   background-color: #ffffff;
   border-color: #f46120;
+}
+.sb-tableContainer .sb-table .dataTables_scrollBody th::before {
+  display: none;
 }
 
 /* ------------------------------
