@@ -323,7 +323,7 @@ html {
 }
 
 .w100, .sb-multiselect .select2-container, .c-header .profileSect .profButton, .sb-dropdown.st-fluid .btn, .c-btn.lg {
-  width: 100%;
+  width: 100% !important;
 }
 
 .m15-btm {
@@ -859,6 +859,52 @@ html {
 .c-searchBody .sb-searchTable {
   padding: 22px;
 }
+.c-searchBody .c-colFilter {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  max-height: 0;
+  overflow: hidden;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  box-shadow: 0 16px 16px #5f5f5f;
+  -moz-box-shadow: 0 16px 16px #5f5f5f;
+  -webkit-box-shadow: 0 16px 16px #5f5f5f;
+  -ms-box-shadow: 0 16px 16px #5f5f5f;
+  -o-box-shadow: 0 16px 16px #5f5f5f;
+}
+.c-searchBody .c-colFilter .filterFooter {
+  border-top: 1px solid #E0DFD5;
+  padding: 12px 22px;
+}
+.c-searchBody::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 3;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+.c-searchBody.js-filterOpen::before {
+  height: 100vh;
+}
+.c-searchBody.js-filterOpen .c-colFilter {
+  max-height: 1000px;
+}
 
 /* ------------------------------
 4. Table Container
@@ -1155,6 +1201,7 @@ html {
   line-height: 26px;
   font-size: 12px;
   padding: 0 10px;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=demandmatrix-style.css.map */

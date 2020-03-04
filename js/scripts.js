@@ -35,4 +35,12 @@ $(function() {
       }
     });
   }
+
+  if ($(".js-pageFilter").length) {
+    $('.js-pageFilter, .js-closeFilter').on('click', function(){
+      var parentDiv = $(this).parents('.c-searchBody');
+      parentDiv.toggleClass('js-filterOpen');
+    })
+  }
+
 });
