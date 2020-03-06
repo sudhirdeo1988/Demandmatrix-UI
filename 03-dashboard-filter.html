@@ -69,11 +69,14 @@
         <!-- ** Header Title End ** -->
 
         <!-- ** Header UserProf ** -->
-        <div class="profileSect">
-          <button class="profButton">
+        <div class="profileSect dropdown">
+          <button class="profButton" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="p-title">Gunther Ackner</span>
             <span class="p-subTitle">Oak Microsystems</span>
           </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
         </div>
         <!-- ** Header UserProf End ** -->
       </div>

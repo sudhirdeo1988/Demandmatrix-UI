@@ -740,8 +740,6 @@ html {
 .c-header {
   background-color: #e0dfd5;
   height: 73px;
-  height: auto;
-  overflow: hidden;
 }
 .c-header .titleSect {
   border-right: 1px solid #cac9be;
@@ -809,7 +807,7 @@ html {
 -------------------------------- */
 .c-searchBody .sb_header {
   border-bottom: 1px solid #e0dfd5;
-  background-color: #ffffff;
+  background-color: #f7f6f4;
   padding: 12px 22px;
 }
 .c-searchBody .sb_header .filterLabel {
@@ -832,7 +830,7 @@ html {
   font-family: "Metropolis-SemiBold", sans-serif;
   font-size: 18px;
   line-height: 22px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .c-searchBody .sb_header .btn-filter {
   background-color: #e0dfd5;
