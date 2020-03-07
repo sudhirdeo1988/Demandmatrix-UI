@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemandMatrix :: Dashboard</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/demandmatrix-style.css" />
+  </head>
+  <body>
+    <!-- ********** Component :: Sidebar **********  -->
+    <div class="c-sidebar">
+      <div class="sidebarLogo">
+        <img src="./images/logo_square.png" alt="image" />
+      </div>
+      <div class="sidebarNav">
+        <ul>
+          <li>
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Home"
+            >
+              <i class="icon dm dm-icon-dashboard"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="navItem st-active"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
+              <i class="icon dm dm-icon-technology"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
+              <i class="icon dm dm-icon-aut"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
+              <i class="icon dm dm-icon-adoption"></i>
+            </button>
+          </li>
+          <li class="lastChild">
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Logout"
+            >
+              <i class="icon dm dm-logout"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ********** Component :: Sidebar End **********  -->
+
+    <!-- ********** Component :: Main Body **********  -->
+    <div class="c-mainBody">
+      <!-- **** Component :: Header ****  -->
+      <div class="c-header">
+        <!-- ** Header Title ** -->
+        <div class="titleSect">
+          <h1 class="pageHeading">Technology Profile</h1>
+        </div>
+        <!-- ** Header Title End ** -->
+
+        <!-- ** Header Tabs ** -->
+        <div class="linkSect">
+          <button class="linkTab st-active">Analytics View</button>
+          <button class="linkTab">Tabular View</button>
+        </div>
+        <!-- ** Header Tabs End ** -->
+
+        <!-- ** Filter Button ** -->
+        <div class="filterSect">
+          <button class="btn-filter">
+            <i class="icon dm-filter"></i>
+            Filter Data
+          </button>
+        </div>
+        <!-- ** Filter Button End ** -->
+      </div>
+      <!-- **** Component :: Header End ****  -->
+
+      <!-- **** Search Body **** -->
+      <div class="c-searchBody">
+        <!-- ** Table ** -->
+        <div class="sb-searchTable">
+          <div class="row">
+            <!-- ***** Left Section ***** -->
+            <div class="col-3">
+              <!-- ***** Collpse Section ***** -->
+              <div class="sb-collpseSection">
+                <div class="accordion sb-accordian" id="accordionExample">
+                  <!-- ***** Collpse card ***** -->
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <button
+                        class="btn"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Google
+                      </button>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        <div class="staticText">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid.
+                        </div>
+                        <div class="row">
+                          <div class="col-6 m15-btm">
+                            <label class="c_lbl">Companies</label>
+                            <span class="c_info">4,324,754</span>
+                          </div>
+                          <div class="col-6 m15-btm">
+                            <label class="c_lbl">Vendor</label>
+                            <span class="c_info">wordpress.org</span>
+                          </div>
+                          <div class="col-12 m15-btm">
+                            <label class="c_lbl">Category</label>
+                            <span class="c_info">Content Management</span>
+                          </div>
+                          <div class="col-12 m15-btm">
+                            <label class="c_lbl">Category</label>
+                            <span class="c_info">Web Content Management</span>
+                          </div>
+                          <div class="col-12 m15-btm">
+                            <label class="c_lbl">68% Actively Used</label>
+                            <div class="c_progress">
+                              <div class="progress_base">
+                                <div
+                                  class="progress_track"
+                                  style="width: 68%;"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <button class="c-link">View NTP Companies</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Collpse card End ***** -->
+
+                  <!-- ***** Collpse card ***** -->
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <button
+                        class="btn btn-link collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        WordPress
+                      </button>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      class="collapse"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high
+                        life accusamus terry richardson ad squid. 3 wolf moon
+                        officia aute, non cupidatat skateboard dolor brunch.
+                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                        wolf moon tempor, sunt aliqua put a bird on it squid
+                        single-origin coffee nulla assumenda shoreditch et.
+                        Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan
+                        excepteur butcher vice lomo. Leggings occaecat craft
+                        beer farm-to-table, raw denim aesthetic synth nesciunt
+                        you probably haven't heard of them accusamus labore
+                        sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Collpse card End ***** -->
+
+                  <!-- ***** Collpse card ***** -->
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <button
+                        class="btn btn-link collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Amazon AWS
+                      </button>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      class="collapse"
+                      aria-labelledby="headingThree"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high
+                        life accusamus terry richardson ad squid. 3 wolf moon
+                        officia aute, non cupidatat skateboard dolor brunch.
+                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                        wolf moon tempor, sunt aliqua put a bird on it squid
+                        single-origin coffee nulla assumenda shoreditch et.
+                        Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan
+                        excepteur butcher vice lomo. Leggings occaecat craft
+                        beer farm-to-table, raw denim aesthetic synth nesciunt
+                        you probably haven't heard of them accusamus labore
+                        sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Collpse card End ***** -->
+                </div>
+              </div>
+              <!-- ***** Collpse Section End ***** -->
+            </div>
+            <!-- ***** Left Section End ***** -->
+
+            <!-- ***** Right Section ***** -->
+            <div class="col-9">
+              <div class="row">
+                <div class="col-8">
+                  <!-- ***** Graph Section ***** -->
+                  <div class="c-graphCard">
+                    <h3 class="gc_title">Adoption-Deadoption</h3>
+                  </div>
+                  <!-- ***** Graph Section End ***** -->
+                </div>
+
+                <div class="col-4">
+                  <!-- ***** Graph Section ***** -->
+                  <div class="c-graphCard">
+                    <h3 class="gc_title">Revenue</h3>
+                  </div>
+                  <!-- ***** Graph Section End ***** -->
+                </div>
+
+                <div class="col-5">
+                  <!-- ***** Graph Section ***** -->
+                  <div class="c-graphCard">
+                    <h3 class="gc_title">Industries</h3>
+                  </div>
+                  <!-- ***** Graph Section End ***** -->
+                </div>
+
+                <div class="col-7">
+                  <!-- ***** Graph Section ***** -->
+                  <div class="c-graphCard">
+                    <h3 class="gc_title">Countries</h3>
+                  </div>
+                  <!-- ***** Graph Section End ***** -->
+                </div>
+              </div>
+            </div>
+            <!-- ***** Right Section End ***** -->
+          </div>
+        </div>
+        <!-- ** Table End ** -->
+      </div>
+      <!-- **** Search Body End **** -->
+    </div>
+    <!-- ********** Component :: Main Body End **********  -->
+
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </body>
+</html>

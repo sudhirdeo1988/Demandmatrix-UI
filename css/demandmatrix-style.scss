@@ -38,11 +38,11 @@
     }
   }
 
-  &.js-datepicker{
-    .form-control{
+  &.js-datepicker {
+    .form-control {
       padding-right: 30px;
     }
-    &::after{
+    &::after {
       font-family: "demandmatrix";
       content: "\78";
       position: absolute;
@@ -172,9 +172,9 @@
   @extend .borderBx;
   @extend .t-center;
 
-  &.gray{
+  &.gray {
     color: $textColor;
-    background-color: #F6F6F3;
+    background-color: #f6f6f3;
   }
 
   &.lg {
@@ -191,8 +191,34 @@
   line-height: 14px;
   letter-spacing: 0.5px;
   padding: 0;
-  outline: none;
+  outline: none !important;
   @extend .inlineblock;
+}
+.btn-filter {
+  background-color: $secondaryColor;
+  box-sizing: border-box;
+  border: 0;
+  color: $white;
+  height: 41px;
+  padding: 12px 24px;
+  line-height: 20px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  outline: none !important;
+  @extend .inlineblock;
+  @extend .relative;
+  @extend .t-center;
+  @include rounded-corners(4px);
+
+  .icon {
+    color: $white;
+    font-size: 16px;
+    vertical-align: middle;
+    line-height: 10px;
+    top: -1px;
+    @extend .inlineblock;
+    @extend .relative;
+  }
 }
 
 .c-bodyContainer {
@@ -417,6 +443,7 @@
   left: 0;
   height: 100%;
   width: 80px;
+  padding-bottom: 80px;
 
   .sidebarLogo {
     box-sizing: border-box;
@@ -426,11 +453,11 @@
     padding: 20px;
     @extend .block;
 
-      img{
-        height: 40px;
-        width: 40px;
-        @extend .block;
-      }
+    img {
+      height: 40px;
+      width: 40px;
+      @extend .block;
+    }
   }
 
   .sidebarNav {
@@ -481,6 +508,12 @@
             }
           }
         }
+        &.lastChild{
+          border: 0;
+          border-top: 1px solid #111c30;
+          position: fixed;
+          bottom: 0;
+        }
       }
     }
   }
@@ -496,17 +529,19 @@
   @extend .relative;
 }
 .c-header {
-  background-color: #e0dfd5;
+  background-color: $white;
   height: 73px;
+  overflow: hidden;
+  z-index: 4;
+  padding-right: 19px;
   @extend .block;
   @extend .relative;
+  @include box-shadow(0 4px 8px rgba(0,0,0,0.1));
 
   .titleSect {
-    border-right: 1px solid #cac9be;
     box-sizing: border-box;
     padding: 22px;
     line-height: 29px;
-    width: calc(100% - 200px);
     @extend .block;
     @extend .left;
 
@@ -520,60 +555,88 @@
       @extend .relative;
     }
   }
-  .profileSect {
-    box-sizing: border-box;
-    height: 73px;
-    padding: 20px;
-    line-height: 33px;
-    width: 200px;
-    float: left;
+  // .profileSect {
+  //   box-sizing: border-box;
+  //   height: 73px;
+  //   padding: 20px;
+  //   line-height: 33px;
+  //   width: 200px;
+  //   float: left;
 
-    .profButton {
-      background-color: transparent;
-      box-sizing: border-box;
-      border: 0;
-      cursor: pointer;
-      padding: 0 20px 0 0;
-      text-align: right;
-      height: 33px;
-      outline: none;
-      @extend .w100;
-      @extend .block;
-      @extend .relative;
+  //   .profButton {
+  //     background-color: transparent;
+  //     box-sizing: border-box;
+  //     border: 0;
+  //     cursor: pointer;
+  //     padding: 0 20px 0 0;
+  //     text-align: right;
+  //     height: 33px;
+  //     outline: none;
+  //     @extend .w100;
+  //     @extend .block;
+  //     @extend .relative;
 
-      &::before {
-        color: $textColor;
-        font-family: "demandmatrix";
-        content: "\69";
-        top: -3px;
-        right: 0;
-        height: 33px;
-        width: 16px;
-        background-color: #d5d4c8;
-        vertical-align: middle;
-        padding: 3px 0;
-        font-size: 10px;
+  //     &::before {
+  //       color: $textColor;
+  //       font-family: "demandmatrix";
+  //       content: "\69";
+  //       top: -3px;
+  //       right: 0;
+  //       height: 33px;
+  //       width: 16px;
+  //       background-color: #d5d4c8;
+  //       vertical-align: middle;
+  //       padding: 3px 0;
+  //       font-size: 10px;
+  //       @extend .t-center;
+  //       @extend .inlineblock;
+  //       @extend .absolute;
+  //       @include rounded-corners(2px);
+  //     }
+
+  //     .p-title {
+  //       color: $textColor;
+  //       font-family: $font-semiBold;
+  //       font-size: 16px;
+  //       line-height: 19px;
+  //       @extend .block;
+  //     }
+  //     .p-subTitle {
+  //       color: $textColor;
+  //       font-size: 12px;
+  //       line-height: 14px;
+  //       letter-spacing: 0.3px;
+  //       @extend .block;
+  //     }
+  //   }
+  // }
+  .filterSect{
+    padding: 16px 0 16px 16px;
+    @extend .right;
+  }
+  .linkSect{
+    border-right: 1px solid #E3E3E3;
+    margin-left: 16px;
+    @extend .right;
+      .linkTab{
+        border: 0;
+        background-color:$white;
+        border-bottom: 5px solid transparent;
+        color: $secondaryColor;
+        cursor: pointer;
+        padding: 29px 16px 23px 16px;
+        font-size: 14px;
+        line-height: 17px;
+        outline: none !important;
+        @extend .left;
         @extend .t-center;
-        @extend .inlineblock;
-        @extend .absolute;
-        @include rounded-corners(2px);
-      }
 
-      .p-title {
-        color: $textColor;
-        font-family: $font-semiBold;
-        font-size: 16px;
-        line-height: 19px;
-        @extend .block;
+          &.st-active{
+            background-color:#EDEDED;
+            border-bottom: 5px solid red;
+            color: $textColor;
+          }
       }
-      .p-subTitle {
-        color: $textColor;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.3px;
-        @extend .block;
-      }
-    }
   }
 }
 
@@ -585,10 +648,12 @@
   @extend .relative;
 
   .sb_header {
-    border-bottom: 1px solid #e0dfd5;
-    background-color: #f7f6f4;
-    padding: 12px 22px;
+    background-color: $white;
+    padding: 16px 14px;
+    margin: 22px 22px 10px;
     @extend .block;
+    @include rounded-corners(4px);
+    @include box-shadow(0 2px 4px rgba(0,0,0,0.1));
 
     .filterLabel {
       margin: 2px 0 1px;
@@ -615,32 +680,6 @@
         }
       }
     }
-    .btn-filter {
-      background-color: #e0dfd5;
-      box-sizing: border-box;
-      border: 0;
-      color: $textColor;
-      height: 41px;
-      padding: 12px 24px;
-      line-height: 20px;
-      font-size: 14px;
-      letter-spacing: 0.4px;
-      outline: none;
-      @extend .inlineblock;
-      @extend .relative;
-      @extend .t-center;
-      @include rounded-corners(4px);
-
-      .icon {
-        color: $secondaryColor;
-        font-size: 16px;
-        vertical-align: middle;
-        line-height: 10px;
-        top: -1px;
-        @extend .inlineblock;
-        @extend .relative;
-      }
-    }
   }
 
   .sb-searchTable {
@@ -649,7 +688,7 @@
     @extend .relative;
   }
 
-  .c-colFilter{
+  .c-colFilter {
     background-color: #fff;
     width: 100%;
     position: absolute;
@@ -661,15 +700,15 @@
     @include transition(all ease 0.3s);
     @include box-shadow(0 16px 16px #5f5f5f);
 
-    .filterFooter{
-      border-top: 1px solid #E0DFD5;
+    .filterFooter {
+      border-top: 1px solid #e0dfd5;
       padding: 12px 22px;
     }
   }
 
-  &::before{
-    content: '';
-    background-color: rgba(0,0,0,0.5);
+  &::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
@@ -680,16 +719,15 @@
     @include transition(all ease 0.3s);
   }
 
-  &.js-filterOpen{
-    &::before{
+  &.js-filterOpen {
+    &::before {
       height: 100vh;
     }
-    .c-colFilter{
+    .c-colFilter {
       max-height: 1000px;
     }
   }
 }
-
 
 /* ------------------------------
 4. Table Container
@@ -812,10 +850,10 @@
       }
     }
 
-    .dataTables_scrollBody{
+    .dataTables_scrollBody {
       @extend .noborder;
-      th{
-        &::before{
+      th {
+        &::before {
           display: none;
         }
       }
@@ -837,7 +875,7 @@
     margin-left: -1px;
     border-left: 1px solid #e0dfd5;
     padding: 0;
-    border-radius: 0 .3rem 0 0;
+    border-radius: 0 0.3rem 0 0;
     @extend .relative;
 
     .titleBlock {
@@ -849,7 +887,7 @@
       padding: 11px 16px;
       min-height: 60px;
 
-      &:last-child{
+      &:last-child {
         border: 0;
       }
 
@@ -888,18 +926,18 @@
   }
 
   /* -- Modal Footer -- */
-  .modalFooter{
-    border-top: 1px solid #E0DFD5;
+  .modalFooter {
+    border-top: 1px solid #e0dfd5;
     padding: 12px 22px;
 
-    .filterLabel{
-      .label{
+    .filterLabel {
+      .label {
         font-size: 12px;
         line-height: 14px;
         color: lighten($color: $textColor, $amount: 60%);
         @extend .block;
       }
-      .info{
+      .info {
         font-size: 18px;
         line-height: 22px;
         color: $textColor;
@@ -937,26 +975,26 @@
       height: 38px;
       position: relative;
 
-      &.select2-selection--single{
-        .select2-selection__rendered{
+      &.select2-selection--single {
+        .select2-selection__rendered {
           line-height: 36px;
         }
-        .select2-selection__arrow{
+        .select2-selection__arrow {
           display: none;
         }
       }
 
-      .select2-selection__choice{
-        background-color: #E0DFD5;
+      .select2-selection__choice {
+        background-color: #e0dfd5;
         font-size: 13px;
         line-height: 16px;
         padding: 6px 5px 3px;
         @include rounded-corners(2px);
 
-          .select2-selection__choice__remove{
-            float: right;
-            margin: 0 0 0 5px;
-          }
+        .select2-selection__choice__remove {
+          float: right;
+          margin: 0 0 0 5px;
+        }
       }
     }
   }
@@ -1047,22 +1085,178 @@
   z-index: 2;
 }
 
-.c-pageLinks{
+.c-pageLinks {
   background-color: #cccccc;
   padding: 30px;
   display: block;
 
-    .heading{
-      display: block;
-      margin: 0 0 30px;
-      color: $textColor;
-      font-size: 18px;
+  .heading {
+    display: block;
+    margin: 0 0 30px;
+    color: $textColor;
+    font-size: 18px;
+  }
+  .linkItem {
+    color: $textColor;
+    display: block;
+    text-decoration: underline;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+/* ------------------------------
+11. Collpse Section
+-------------------------------- */
+.sb-collpseSection {
+  display: block;
+  position: relative;
+  @include box-shadow(0 0 4px #dcdcdc);
+}
+.sb-accordian {
+  .card {
+    @extend .noborder;
+    border-bottom: 1px solid #ededed;
+    @include rounded-corners(0);
+
+    &:first-child {
+      @include rounded-corners(4px 4px 0 0);
+      .card-header {
+        @include rounded-corners(4px 4px 0 0);
+        .btn {
+          @include rounded-corners(4px 4px 0 0);
+        }
+      }
     }
-    .linkItem{
-      color: $textColor;
-      display: block;
-      text-decoration: underline;
-      font-size: 16px;
-      margin-bottom: 20px;
+
+    .card-header {
+      border: 0;
+      position: relative;
+      padding: 0;
+      outline: none !important;
+
+      .btn {
+        background-color: $white;
+        border: 0;
+        box-sizing: border-box;
+        color: $textColor;
+        display: block;
+        padding: 16px 30px 16px 16px;
+        line-height: 18px;
+        outline: none !important;
+        font-size: 14px;
+        font-family: $font-semiBold;
+        text-decoration: none;
+        @extend .w100;
+        @extend .t-left;
+        @extend .relative;
+
+          &::after{
+            font-family: "demandmatrix";
+            content: "\43";
+            position: absolute;
+            top: 17px;
+            right: 12px;
+            height: 15px;
+            font-size: 15px;
+            width: 15px;
+            line-height: 16px;
+            display: inline-block;
+          }
+      }
     }
+    .card-body{
+      background-color: #EDEDED;
+      padding: 16px;
+
+        .staticText{
+          color: $textColor;
+          font-size: 12px;
+          line-height: 16px;
+          margin-bottom: 16px;
+          @extend .block;
+        }
+        .c_lbl{
+          color: rgba(48, 59, 80, 0.6);
+          display: block;
+          font-size: 10px;
+          line-height: 12px;
+          margin-bottom: 2px;
+        }
+        .c_info{
+          color: $textColor;
+          display: block;
+          font-size: 12px;
+          line-height: 14px;
+        }
+        .c_progress{
+          display: block;
+          position: relative;
+          height: 5px;
+          margin-top: 7px;
+          @include rounded-corners(4px);
+
+            .progress_base{
+              background-color: #E80D0D;
+              box-sizing: border-box;
+              position: relative;
+              height: 5px;
+              width: 100%;
+              @include rounded-corners(4px);
+
+                .progress_track{
+                  border-right: 1px solid #fff;
+                  background-color:#0F9F3F;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 5px;
+                  width: 1px;
+                  @include rounded-corners(4px);
+                }
+            }
+        }
+    }
+  }
+}
+
+/* ------------------------------
+11. Graph Section
+-------------------------------- */
+.c-graphCard{
+  background-color: $white;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  height: 300px;
+  padding: 16px;
+  margin-bottom: 16px;
+  @include rounded-corners(5px);
+  @include box-shadow(0 0 4px rgba(0,0,0,0.1));
+
+    .gc_title{
+      color: $textColor;
+      font-family: $font-semiBold;
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0 0 14px;
+      display: block;
+      position: relative;
+    }
+}
+
+/* ------------------------------
+15. Misclesinous
+-------------------------------- */
+.tableHeading{
+  color: $textColor;
+  display: block;
+  font-family: $font-semiBold;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 8px 0 6px;
+}
+.text-col{
+  color: $secondaryColor;
+  display: inline-block;
 }

@@ -152,7 +152,15 @@
 .dm-minus:before {
   content: "\42";
 }
-
+.dm-angle-down:before {
+  content: "\43";
+}
+.dm-angle-up:before {
+  content: "\45";
+}
+.dm-logout:before {
+  content: "\44";
+}
 /* -------------------------------------
 	Variables Setting
 ------------------------------------- */
@@ -166,6 +174,7 @@ $textColor: #303b50;
 
 $white: #ffffff;
 $black: #000000;
+
 
 /* -------------------------------------
 	Theme default CSS

@@ -22,8 +22,8 @@ $(function() {
       searching: false,
       lengthChange: false,
       pageLength: 25,
-      "scrollY": "200px",
-      "scrollCollapse": true,
+      scrollY: "200px",
+      scrollCollapse: true,
       columnDefs: [{ targets: "no-sort", orderable: false }],
       oLanguage: {
         oPaginate: {
@@ -37,10 +37,11 @@ $(function() {
   }
 
   if ($(".js-pageFilter").length) {
-    $('.js-pageFilter, .js-closeFilter').on('click', function(){
-      var parentDiv = $(this).parents('.c-searchBody');
-      parentDiv.toggleClass('js-filterOpen');
-    })
+    $(".js-pageFilter, .js-closeFilter").on("click", function() {
+      var parentDiv = $(this).parents(".c-searchBody");
+      parentDiv.toggleClass("js-filterOpen");
+    });
   }
 
+  $('[data-toggle="tooltip"]').tooltip();
 });

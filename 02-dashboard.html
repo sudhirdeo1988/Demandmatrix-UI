@@ -19,33 +19,58 @@
       <div class="sidebarNav">
         <ul>
           <li>
-            <button class="navItem">
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Home"
+            >
               <i class="icon dm dm-icon-dashboard"></i>
             </button>
           </li>
           <li>
-            <button class="navItem st-active">
+            <button
+              class="navItem st-active"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
               <i class="icon dm dm-icon-technology"></i>
             </button>
           </li>
           <li>
-            <button class="navItem">
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
               <i class="icon dm dm-icon-aut"></i>
             </button>
           </li>
           <li>
-            <button class="navItem">
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
               <i class="icon dm dm-icon-adoption"></i>
             </button>
           </li>
-          <li>
-            <button class="navItem">
-              <i class="icon dm dm-icon-ntp"></i>
-            </button>
-          </li>
-          <li>
-            <button class="navItem">
-              <i class="icon dm dm-icon-trending"></i>
+          <li class="lastChild">
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Logout"
+            >
+              <i class="icon dm dm-logout"></i>
             </button>
           </li>
         </ul>
@@ -63,14 +88,21 @@
         </div>
         <!-- ** Header Title End ** -->
 
-        <!-- ** Header UserProf ** -->
-        <div class="profileSect">
-          <button class="profButton">
-            <span class="p-title">Gunther Ackner</span>
-            <span class="p-subTitle">Oak Microsystems</span>
+        <!-- ** Header Tabs ** -->
+        <div class="linkSect">
+          <button class="linkTab st-active">Analytics View</button>
+          <button class="linkTab">Tabular View</button>
+        </div>
+        <!-- ** Header Tabs End ** -->
+
+        <!-- ** Filter Button ** -->
+        <div class="filterSect">
+          <button class="btn-filter">
+            <i class="icon dm-filter"></i>
+            Filter Data
           </button>
         </div>
-        <!-- ** Header UserProf End ** -->
+        <!-- ** Filter Button End ** -->
       </div>
       <!-- **** Component :: Header End ****  -->
 
