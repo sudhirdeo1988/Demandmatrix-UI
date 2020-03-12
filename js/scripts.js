@@ -44,4 +44,10 @@ $(function() {
   }
 
   $('[data-toggle="tooltip"]').tooltip();
+
+
+  if ($(".sb-autoselect").length) {
+    $(".sb-autoselect .js-serchSelect").select2();
+  }
+
 });

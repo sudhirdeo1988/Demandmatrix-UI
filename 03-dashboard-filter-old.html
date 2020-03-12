@@ -112,7 +112,7 @@
       <!-- **** Component :: Header End ****  -->
 
       <!-- **** Search Body **** -->
-      <div class="c-searchBody js-filterOpen">
+      <div class="c-searchBody">
 
         <!-- **** Page Filter **** -->
         <div class="c-colFilter">
@@ -121,57 +121,51 @@
             <div class="row no-gutters sb-filterBody">
               <div class="col-4">
                 <div class="filterLeft">
-                  <h3 class="f_title">Product</h3>
-                  <!-- ** product dd ** -->
-                  <div class="sb-autoselect">
-                    <select
-                      class="js-dropdown js-serchSelect"
-                      name="product"
+                  <h3 class="f_title">Company or Product</h3>
+                  <span class="f_text m25-btm"
+                    >Technology profile Technology profile o Technology profile
+                    o Technology profile o</span
+                  >
+
+                  <!-- ** Switch ** -->
+                  <div class="col-12 pad0 m25-btm">
+                    <div class="sb-toggleSwich clearfix block">
+                      <div class="can-toggle sm">
+                        <input id="b" type="checkbox" />
+                        <label for="b">
+                          <div
+                            class="can-toggle__switch"
+                            data-checked="Company"
+                            data-unchecked="Product"
+                          ></div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ** Switch End ** -->
+
+                  <!-- ** Dropdown ** -->
+                  <div class="dropdown sb-dropdown st-fluid">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
                     >
-                      <option value="AL">Alabama</option>
-                      <option value="WY">Wyoming</option>
-                    </select>
+                      MICROSOFT OFFICE
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                   </div>
-                  <!-- ** product dd End  ** -->
-
-                  <!-- ** DD tags  ** -->
-                  <div class="c-filterTags">
-                    <ul>
-                      <li>
-                        <span class="tagBtn">
-                          Google Analytics
-                          <button class="btnDel"></button>
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- ** DD tags End  ** -->
-
-                  <!-- ** similar tags  ** -->
-                  <div class="c-similatTabs">
-                    <span class="tabTitle">Add Similar Products</span>
-                    <ul>
-                      <li>
-                        <button class="tagBtn">
-                          Adobe Analytics
-                        </button>
-                      </li>
-                      <li>
-                        <button class="tagBtn">
-                          Adobe Analytics
-                        </button>
-                      </li>
-                      <li>
-                        <button class="tagBtn">
-                          Adobe Analytics
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- ** similar tags End  ** -->
-
-
-
+                  <!-- ** Dropdown ** -->
                 </div>
               </div>
 
