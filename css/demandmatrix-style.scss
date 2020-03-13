@@ -665,6 +665,13 @@
         letter-spacing: 0.4px;
         @extend .block;
         @extend .relative;
+
+        &.lg{
+          color: $textColor;
+          font-size: 18px;
+          line-height: 22px;
+          font-family: $font-semiBold;
+        }
       }
       .info {
         color: $textColor;
@@ -672,11 +679,27 @@
         line-height: 17px;
         letter-spacing: 0.4px;
         @extend .block;
+        @extend .relative;
         &.lg {
           font-family: $font-semiBold;
           font-size: 18px;
           line-height: 22px;
           text-transform: capitalize;
+        }
+        &.c-icon{
+          color: rgba(48, 59, 80, 0.6);
+          font-size: 12px;
+          padding-left: 15px;
+            &::before{
+              font-family: "demandmatrix";
+              content: "\65";
+              position: absolute;
+              top: 2px;
+              left: 0;
+              font-size: 12px;
+              line-height: 11px;
+              @extend .inlineblock;
+            }
         }
       }
     }
@@ -804,6 +827,36 @@
             line-height: 18px;
             padding: 8px;
             vertical-align: top;
+
+            .c-tdInfo{
+              display: block;
+              @extend .ellipsis;
+
+              &.c-notifyDot{
+                box-sizing: border-box;
+                padding-left: 15px;
+                width: calc(100% - 20px);
+                @extend .relative;
+
+                &::before{
+                  content: '';
+                  top: 5px;
+                  left: 0;
+                  height: 8px;
+                  width: 8px;
+                  background-color: #999999;
+                  @extend .absolute;
+                  @extend .inlineblock;
+                  @include rounded-corners(20px);
+                }
+                &.col-red::before{
+                  background-color:#E80D0D;
+                }
+                &.col-grn::before{
+                  background-color: #0F9F3F;
+                }
+              }
+            }
 
             &:last-child {
               border-right: 0;
@@ -1360,22 +1413,23 @@
 /* ------------------------------
 15. Misclesinous
 -------------------------------- */
-.c-notifyDot{
-  background-color: #999999;
-  margin-left: 2px;
-  height: 8px;
-  width: 8px;
-  @extend .relative;
-  @extend .inlineblock;
-  @include rounded-corners(20px);
+// .c-notifyDot{
+  // background-color: #999999;
+  // margin-left: 2px;
+  // height: 8px;
+  // width: 8px;
+  // @extend .relative;
+  // @extend .inlineblock;
+  // @include rounded-corners(20px);
 
-    &.col-red{
-      background-color:#E80D0D;
-    }
-    &.col-grn{
-      background-color: #0F9F3F;
-    }
-}
+    // &.col-red{
+    //   background-color:#E80D0D;
+    // }
+    // &.col-grn{
+    //   background-color: #0F9F3F;
+    // }
+// }
+
 .tableHeading {
   color: $textColor;
   display: block;

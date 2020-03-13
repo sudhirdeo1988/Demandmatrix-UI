@@ -234,11 +234,11 @@ html {
   float: none;
 }
 
-.absolute, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after {
+.absolute, .sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot::before, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after {
   position: absolute;
 }
 
-.relative, .c-notifyDot, .sb-accordian .card .card-header .btn, .sb-multiselect .select2-container, .c-similatTabs ul li .tagBtn, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .filterRight .infoBlock .b_label, .sb-filterBody .filterRight, .sb-filterBody .filterLeft, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .sb-dropdown.st-fluid .btn, .btn-filter .icon, .btn-filter, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.relative, .sb-accordian .card .card-header .btn, .sb-multiselect .select2-container, .c-similatTabs ul li .tagBtn, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .filterRight .infoBlock .b_label, .sb-filterBody .filterRight, .sb-filterBody .filterLeft, .sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .sb-dropdown.st-fluid .btn, .btn-filter .icon, .btn-filter, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   position: relative;
 }
 
@@ -262,7 +262,7 @@ html {
   display: block;
 }
 
-.inlineblock, .c-notifyDot, .c-similatTabs ul li, .sb-filterBody .c-filterTags ul li, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button .icon, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .loginLogo img, .sb-toggleSwich, .sb-dropdown, .btn-filter .icon, .btn-filter, .c-link, .c-btn, .c-checkGroup .form-check-label .icon {
+.inlineblock, .c-similatTabs ul li, .sb-filterBody .c-filterTags ul li, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button .icon, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot::before, .c-searchBody .sb_header .filterLabel .info.c-icon::before, .loginLogo img, .sb-toggleSwich, .sb-dropdown, .btn-filter .icon, .btn-filter, .c-link, .c-btn, .c-checkGroup .form-check-label .icon {
   display: inline-block;
 }
 
@@ -368,6 +368,12 @@ html {
 
 .m0, .c-similatTabs ul, .sb-filterBody .c-filterTags ul {
   margin: 0 !important;
+}
+
+.ellipsis, .sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ---------------------------------
@@ -861,6 +867,12 @@ html {
   margin-bottom: 2px;
   letter-spacing: 0.4px;
 }
+.c-searchBody .sb_header .filterLabel .label.lg {
+  color: #303b50;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Metropolis-SemiBold", sans-serif;
+}
 .c-searchBody .sb_header .filterLabel .info {
   color: #303b50;
   font-size: 14px;
@@ -872,6 +884,20 @@ html {
   font-size: 18px;
   line-height: 22px;
   text-transform: capitalize;
+}
+.c-searchBody .sb_header .filterLabel .info.c-icon {
+  color: rgba(48, 59, 80, 0.6);
+  font-size: 12px;
+  padding-left: 15px;
+}
+.c-searchBody .sb_header .filterLabel .info.c-icon::before {
+  font-family: "demandmatrix";
+  content: "e";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font-size: 12px;
+  line-height: 11px;
 }
 .c-searchBody .sb-searchTable {
   padding: 22px;
@@ -982,6 +1008,31 @@ html {
   line-height: 18px;
   padding: 8px;
   vertical-align: top;
+}
+.sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo {
+  display: block;
+}
+.sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot {
+  box-sizing: border-box;
+  padding-left: 15px;
+  width: calc(100% - 20px);
+}
+.sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot::before {
+  content: "";
+  top: 5px;
+  left: 0;
+  height: 8px;
+  width: 8px;
+  background-color: #999999;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot.col-red::before {
+  background-color: #E80D0D;
+}
+.sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot.col-grn::before {
+  background-color: #0F9F3F;
 }
 .sb-tableContainer .sb-table.st-clean .table tr td:last-child {
   border-right: 0;
@@ -1477,22 +1528,6 @@ html {
 /* ------------------------------
 15. Misclesinous
 -------------------------------- */
-.c-notifyDot {
-  background-color: #999999;
-  margin-left: 2px;
-  height: 8px;
-  width: 8px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-}
-.c-notifyDot.col-red {
-  background-color: #E80D0D;
-}
-.c-notifyDot.col-grn {
-  background-color: #0F9F3F;
-}
-
 .tableHeading {
   color: #303b50;
   display: block;

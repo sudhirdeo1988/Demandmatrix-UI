@@ -364,6 +364,11 @@ html {
 %m0 {
   margin: 0 !important;
 }
+.ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 @mixin rounded-corners($property) {
   -webkit-border-radius: $property;
