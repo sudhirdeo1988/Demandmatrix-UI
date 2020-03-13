@@ -238,7 +238,7 @@ html {
   position: absolute;
 }
 
-.relative, .sb-accordian .card .card-header .btn, .sb-multiselect .select2-container, .c-similatTabs ul li .tagBtn, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .filterRight .infoBlock .b_label, .sb-filterBody .filterRight, .sb-filterBody .filterLeft, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .sb-dropdown.st-fluid .btn, .btn-filter .icon, .btn-filter, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.relative, .c-notifyDot, .sb-accordian .card .card-header .btn, .sb-multiselect .select2-container, .c-similatTabs ul li .tagBtn, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .filterRight .infoBlock .b_label, .sb-filterBody .filterRight, .sb-filterBody .filterLeft, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .sb-dropdown.st-fluid .btn, .btn-filter .icon, .btn-filter, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   position: relative;
 }
 
@@ -258,11 +258,11 @@ html {
   visibility: hidden;
 }
 
-.block, .sb-autoselect, .sb-accordian .card .card-body .staticText, .sb-multiselect .select2-container, .sb-modal .modalFooter .filterLabel .info, .sb-modal .modalFooter .filterLabel .label, .c-similatTabs ul li .tagBtn, .c-similatTabs ul, .c-similatTabs .tabTitle, .c-similatTabs, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .c-filterTags ul, .sb-filterBody .c-filterTags, .sb-filterBody .f_text, .sb-filterBody .f_title, .sb-filterBody .filterRight .infoBlock .b_label, .sb-tableContainer .sb-table.st-clean, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody .sb_header, .c-searchBody, .c-header .titleSect .pageHeading, .c-header .titleSect, .c-header, .c-mainBody, .c-sidebar .sidebarLogo img, .c-sidebar .sidebarLogo, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .staticText, .sb-dropdown.st-fluid .btn, .sb-dropdown.st-fluid, .sb-dropdown .dropdown-menu .optionList ul li, .sb-dropdown .dropdown-menu .optionList ul, .sb-dropdown .dropdown-menu .optionList, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.block, .sb-autoselect, .sb-accordian .card .card-body .staticText, .sb-multiselect .select2-container, .sb-modal .modalFooter .filterLabel .info, .sb-modal .modalFooter .filterLabel .label, .c-blankFilter .displayText, .c-similatTabs ul li .tagBtn, .c-similatTabs ul, .c-similatTabs .tabTitle, .c-similatTabs, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .c-filterTags ul, .sb-filterBody .c-filterTags, .sb-filterBody .f_text, .sb-filterBody .f_title, .sb-filterBody .filterRight .infoBlock .b_label, .sb-tableContainer .sb-table.st-clean, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody .sb_header, .c-searchBody, .c-header .titleSect .pageHeading, .c-header .titleSect, .c-header, .c-mainBody, .c-sidebar .sidebarLogo img, .c-sidebar .sidebarLogo, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .staticText, .sb-dropdown.st-fluid .btn, .sb-dropdown.st-fluid, .sb-dropdown .dropdown-menu .optionList ul li, .sb-dropdown .dropdown-menu .optionList ul, .sb-dropdown .dropdown-menu .optionList, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   display: block;
 }
 
-.inlineblock, .c-similatTabs ul li, .sb-filterBody .c-filterTags ul li, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button .icon, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .loginLogo img, .sb-toggleSwich, .sb-dropdown, .btn-filter .icon, .btn-filter, .c-link, .c-btn, .c-checkGroup .form-check-label .icon {
+.inlineblock, .c-notifyDot, .c-similatTabs ul li, .sb-filterBody .c-filterTags ul li, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button .icon, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .loginLogo img, .sb-toggleSwich, .sb-dropdown, .btn-filter .icon, .btn-filter, .c-link, .c-btn, .c-checkGroup .form-check-label .icon {
   display: inline-block;
 }
 
@@ -1135,6 +1135,22 @@ html {
   background-color: #D4D4D4;
 }
 
+.c-blankFilter {
+  padding: 70px 0;
+  text-align: center;
+}
+.c-blankFilter .displayImage {
+  background-color: #cac9be;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto 20px;
+}
+.c-blankFilter .displayText {
+  color: #303b50;
+  font-size: 14px;
+  line-height: 18px;
+}
+
 .sb-modal {
   /* -- Modal Footer -- */
 }
@@ -1461,6 +1477,22 @@ html {
 /* ------------------------------
 15. Misclesinous
 -------------------------------- */
+.c-notifyDot {
+  background-color: #999999;
+  margin-left: 2px;
+  height: 8px;
+  width: 8px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.c-notifyDot.col-red {
+  background-color: #E80D0D;
+}
+.c-notifyDot.col-grn {
+  background-color: #0F9F3F;
+}
+
 .tableHeading {
   color: #303b50;
   display: block;

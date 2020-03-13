@@ -1012,6 +1012,24 @@
     }
 }
 
+.c-blankFilter{
+  padding: 70px 0;
+  text-align: center;
+
+    .displayImage{
+      background-color: #cac9be;
+      height: 100px;
+      width: 100px;
+      margin: 0 auto 20px;
+    }
+    .displayText{
+      color: $textColor;
+      font-size: 14px;
+      line-height: 18px;
+      @extend .block;
+    }
+}
+
 .sb-modal {
   &.st-filter {
     .modal-dialog {
@@ -1342,6 +1360,22 @@
 /* ------------------------------
 15. Misclesinous
 -------------------------------- */
+.c-notifyDot{
+  background-color: #999999;
+  margin-left: 2px;
+  height: 8px;
+  width: 8px;
+  @extend .relative;
+  @extend .inlineblock;
+  @include rounded-corners(20px);
+
+    &.col-red{
+      background-color:#E80D0D;
+    }
+    &.col-grn{
+      background-color: #0F9F3F;
+    }
+}
 .tableHeading {
   color: $textColor;
   display: block;
