@@ -142,7 +142,6 @@
         </div>
         <!-- ** Header End ** -->
 
-
         <!-- ** Header ** -->
         <div class="sb_header">
           <div class="row">
@@ -150,7 +149,13 @@
               <div class="filterLabel m0">
                 <span class="label lg">Google</span>
                 <span class="info c-icon">388,232 Companies</span>
-                <button class="c-link">More Details</button>
+                <button
+                  class="c-link"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  More Details
+                </button>
               </div>
             </div>
 
@@ -158,7 +163,13 @@
               <div class="filterLabel">
                 <span class="label lg">WordPress</span>
                 <span class="info c-icon">388,232 Companies</span>
-                <button class="c-link">More Details</button>
+                <button
+                  class="c-link"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  More Details
+                </button>
               </div>
             </div>
 
@@ -166,7 +177,13 @@
               <div class="filterLabel">
                 <span class="label lg">Google</span>
                 <span class="info c-icon">388,232 Companies</span>
-                <button class="c-link">More Details</button>
+                <button
+                  class="c-link"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  More Details
+                </button>
               </div>
             </div>
 
@@ -174,10 +191,15 @@
               <div class="filterLabel">
                 <span class="label lg">WordPress</span>
                 <span class="info c-icon">388,232 Companies</span>
-                <button class="c-link">More Details</button>
+                <button
+                  class="c-link"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >
+                  More Details
+                </button>
               </div>
             </div>
-
           </div>
         </div>
         <!-- ** Header End ** -->
@@ -418,6 +440,62 @@
       <!-- **** Search Body End **** -->
     </div>
     <!-- ********** Component :: Main Body End **********  -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade sb-modal st-custom"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <div class="card-body">
+              <span class="cardTitle">WordPress</span>
+              <div class="staticText">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life
+                accusamus terry richardson ad squid.
+              </div>
+              <div class="row">
+                <div class="col-6 m15-btm">
+                  <label class="c_lbl">Companies</label>
+                  <span class="c_info">4,324,754</span>
+                </div>
+                <div class="col-6 m15-btm">
+                  <label class="c_lbl">Vendor</label>
+                  <span class="c_info">wordpress.org</span>
+                </div>
+                <div class="col-12 m15-btm">
+                  <label class="c_lbl">Category</label>
+                  <span class="c_info">Content Management</span>
+                </div>
+                <div class="col-12 m15-btm">
+                  <label class="c_lbl">Category</label>
+                  <span class="c_info">Web Content Management</span>
+                </div>
+                <div class="col-12 m15-btm">
+                  <label class="c_lbl">68% Actively Used</label>
+                  <div class="c_progress">
+                    <div class="progress_base">
+                      <div class="progress_track" style="width: 68%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="./js/popper.min.js"></script>

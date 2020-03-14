@@ -1083,6 +1083,8 @@
     }
 }
 
+/* -- Modal -- */
+
 .sb-modal {
   &.st-filter {
     .modal-dialog {
@@ -1109,6 +1111,49 @@
         font-family: $font-semiBold;
         @extend .block;
       }
+    }
+  }
+
+  &.st-custom{
+    .modal-dialog{
+      box-sizing: border-box;
+      width: 300px;
+
+        .modal-body{
+          padding: 24px 16px;
+
+            .card-body{
+              background-color: $white;
+              @extend .pad0;
+
+                .cardTitle{
+                  color: $textColor;
+                  font-family: $font-semiBold;
+                  font-size: 18px;
+                  line-height: 22px;
+                  margin-bottom: 16px;
+                  @extend .block;
+                }
+            }
+        }
+    }
+    .close{
+      top: -15px;
+      right: -5px;
+      border: 0;
+      height: 20px;
+      width: 20px;
+      outline: none;
+      @extend .pad0;
+      @extend .relative;
+
+        &::before{
+          font-family: "demandmatrix";
+          content: "\46";
+          color: $textColor;
+          font-size: 20px;
+          line-height: 20px;
+        }
     }
   }
 }
@@ -1330,58 +1375,6 @@
         }
       }
     }
-    .card-body {
-      background-color: #ededed;
-      padding: 16px;
-
-      .staticText {
-        color: $textColor;
-        font-size: 12px;
-        line-height: 16px;
-        margin-bottom: 16px;
-        @extend .block;
-      }
-      .c_lbl {
-        color: rgba(48, 59, 80, 0.6);
-        display: block;
-        font-size: 10px;
-        line-height: 12px;
-        margin-bottom: 2px;
-      }
-      .c_info {
-        color: $textColor;
-        display: block;
-        font-size: 12px;
-        line-height: 14px;
-      }
-      .c_progress {
-        display: block;
-        position: relative;
-        height: 5px;
-        margin-top: 7px;
-        @include rounded-corners(4px);
-
-        .progress_base {
-          background-color: #e80d0d;
-          box-sizing: border-box;
-          position: relative;
-          height: 5px;
-          width: 100%;
-          @include rounded-corners(4px);
-
-          .progress_track {
-            border-right: 1px solid #fff;
-            background-color: #0f9f3f;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 5px;
-            width: 1px;
-            @include rounded-corners(4px);
-          }
-        }
-      }
-    }
   }
 }
 
@@ -1413,6 +1406,58 @@
 /* ------------------------------
 15. Misclesinous
 -------------------------------- */
+.card-body {
+  background-color: #ededed;
+  padding: 16px;
+
+  .staticText {
+    color: $textColor;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 16px;
+    @extend .block;
+  }
+  .c_lbl {
+    color: rgba(48, 59, 80, 0.6);
+    display: block;
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 2px;
+  }
+  .c_info {
+    color: $textColor;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .c_progress {
+    display: block;
+    position: relative;
+    height: 5px;
+    margin-top: 7px;
+    @include rounded-corners(4px);
+
+    .progress_base {
+      background-color: #e80d0d;
+      box-sizing: border-box;
+      position: relative;
+      height: 5px;
+      width: 100%;
+      @include rounded-corners(4px);
+
+      .progress_track {
+        border-right: 1px solid #fff;
+        background-color: #0f9f3f;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5px;
+        width: 1px;
+        @include rounded-corners(4px);
+      }
+    }
+  }
+}
 // .c-notifyDot{
   // background-color: #999999;
   // margin-left: 2px;
