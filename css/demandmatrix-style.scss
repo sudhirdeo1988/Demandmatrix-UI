@@ -1070,10 +1070,15 @@
   text-align: center;
 
     .displayImage{
-      background-color: #cac9be;
+      background-color: $white;
       height: 100px;
       width: 100px;
       margin: 0 auto 20px;
+
+      img{
+        height: 100px;
+        width: 100px;
+      }
     }
     .displayText{
       color: $textColor;

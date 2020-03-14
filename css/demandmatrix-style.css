@@ -187,6 +187,10 @@
   content: "F";
 }
 
+.dm-icon-company:before {
+  content: "H";
+}
+
 /* -------------------------------------
 	Variables Setting
 ------------------------------------- */
@@ -1191,10 +1195,14 @@ html {
   text-align: center;
 }
 .c-blankFilter .displayImage {
-  background-color: #cac9be;
+  background-color: #ffffff;
   height: 100px;
   width: 100px;
   margin: 0 auto 20px;
+}
+.c-blankFilter .displayImage img {
+  height: 100px;
+  width: 100px;
 }
 .c-blankFilter .displayText {
   color: #303b50;
