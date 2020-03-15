@@ -1187,7 +1187,7 @@
     .select2-selection {
       box-sizing: border-box;
       border: 1px solid #cac9be;
-      height: 38px;
+      min-height: 38px;
       position: relative;
 
       &.select2-selection--single {
@@ -1204,6 +1204,7 @@
         font-size: 13px;
         line-height: 16px;
         padding: 6px 5px 3px;
+        @extend .inlineblock;
         @include rounded-corners(2px);
 
         .select2-selection__choice__remove {

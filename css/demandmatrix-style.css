@@ -266,7 +266,7 @@ html {
   display: block;
 }
 
-.inlineblock, .c-similatTabs ul li, .sb-filterBody .c-filterTags ul li, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button .icon, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot::before, .c-searchBody .sb_header .filterLabel .info.c-icon::before, .loginLogo img, .sb-toggleSwich, .sb-dropdown, .btn-filter .icon, .btn-filter, .c-link, .c-btn, .c-checkGroup .form-check-label .icon {
+.inlineblock, .sb-multiselect .select2-container .select2-selection .select2-selection__choice, .c-similatTabs ul li, .sb-filterBody .c-filterTags ul li, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button .icon, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot::before, .c-searchBody .sb_header .filterLabel .info.c-icon::before, .loginLogo img, .sb-toggleSwich, .sb-dropdown, .btn-filter .icon, .btn-filter, .c-link, .c-btn, .c-checkGroup .form-check-label .icon {
   display: inline-block;
 }
 
@@ -1282,7 +1282,7 @@ html {
 .sb-multiselect .select2-container .select2-selection {
   box-sizing: border-box;
   border: 1px solid #cac9be;
-  height: 38px;
+  min-height: 38px;
   position: relative;
 }
 .sb-multiselect .select2-container .select2-selection.select2-selection--single .select2-selection__rendered {
