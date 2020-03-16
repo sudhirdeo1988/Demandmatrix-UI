@@ -38,6 +38,33 @@
     }
   }
 
+  &.search{
+    .form-control {
+      line-height: 18px;
+      padding: 10px 10px 8px 40px;
+      background-color: #f5f5f5;
+      border-color: #e3e3e3;
+      height: auto;
+      position: relative;
+
+        &:focus,
+        &:active{
+          border-color: $secondaryColor;
+        }
+    }
+    &::before {
+      font-family: "demandmatrix";
+      content: "G";
+      color: #f46120;
+      font-size: 13px;
+      line-height: 13px;
+      position: absolute;
+      left: 13px;
+      top: 13px;
+      z-index: 5;
+  }
+  }
+
   &.js-datepicker {
     .form-control {
       padding-right: 30px;
@@ -139,6 +166,7 @@
       font-style: normal;
       font-size: 21px;
       line-height: 18px;
+      top: -2px;
       font-family: "demandmatrix";
       content: "";
       @extend .relative;
@@ -952,6 +980,12 @@
         @extend .relative;
         @extend .block;
         @extend .t-left;
+      }
+
+      .c-costomCheck{
+        .b_label{
+          top: 0;
+        }
       }
     }
   }

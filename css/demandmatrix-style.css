@@ -409,6 +409,28 @@ html {
 .c-formGroup .form-control::placeholder {
   color: #c0c8d9;
 }
+.c-formGroup.search .form-control {
+  line-height: 18px;
+  padding: 10px 10px 8px 40px;
+  background-color: #f5f5f5;
+  border-color: #e3e3e3;
+  height: auto;
+  position: relative;
+}
+.c-formGroup.search .form-control:focus, .c-formGroup.search .form-control:active {
+  border-color: #f46120;
+}
+.c-formGroup.search::before {
+  font-family: "demandmatrix";
+  content: "G";
+  color: #f46120;
+  font-size: 13px;
+  line-height: 13px;
+  position: absolute;
+  left: 13px;
+  top: 13px;
+  z-index: 5;
+}
 .c-formGroup.js-datepicker .form-control {
   padding-right: 30px;
 }
@@ -487,6 +509,7 @@ html {
   font-style: normal;
   font-size: 21px;
   line-height: 18px;
+  top: -2px;
   font-family: "demandmatrix";
   content: "";
   -webkit-border-radius: 4px;
@@ -1108,6 +1131,9 @@ html {
   line-height: 16px;
   margin: 0;
   top: 11px;
+}
+.sb-filterBody .filterRight .infoBlock .c-costomCheck .b_label {
+  top: 0;
 }
 .sb-filterBody .f_title {
   color: #303b50;
