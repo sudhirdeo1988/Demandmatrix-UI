@@ -427,7 +427,7 @@
 .c-loginBox {
   background-color: #e0dfd5;
   width: 371px;
-  min-height: 383px;
+  min-height: 200px;
   box-sizing: border-box;
   padding: 30px 36px;
   @extend .block;
@@ -1129,7 +1129,7 @@
 }
 
 .c-blankFilter{
-  padding: 70px 0;
+  padding: 70px 0 0;
   text-align: center;
 
     .displayImage{
