@@ -1106,6 +1106,9 @@ html {
   background-color: #ffffff;
   border-color: #f46120;
 }
+.sb-tableContainer .sb-table.c-fixHeight .st-tableFixHeight {
+  height: 300px;
+}
 .sb-tableContainer .sb-table .dataTables_scrollBody th::before {
   display: none;
 }
@@ -1324,6 +1327,8 @@ html {
   box-sizing: border-box;
   border: 1px solid #cac9be;
   min-height: 38px;
+  max-height: 50px;
+  overflow-y: auto;
   position: relative;
 }
 .sb-multiselect .select2-container .select2-selection.select2-selection--single .select2-selection__rendered {
@@ -1337,6 +1342,10 @@ html {
   font-size: 13px;
   line-height: 16px;
   padding: 6px 5px 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 30px);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;

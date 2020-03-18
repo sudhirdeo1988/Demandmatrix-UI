@@ -944,6 +944,12 @@
       }
     }
 
+    &.c-fixHeight{
+      .st-tableFixHeight{
+        height: 300px;
+      }
+    }
+
     .dataTables_scrollBody {
       @extend .noborder;
       th {
@@ -1251,6 +1257,8 @@
       box-sizing: border-box;
       border: 1px solid #cac9be;
       min-height: 38px;
+      max-height: 50px;
+      overflow-y: auto;
       position: relative;
 
       &.select2-selection--single {
@@ -1267,6 +1275,10 @@
         font-size: 13px;
         line-height: 16px;
         padding: 6px 5px 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100% - 30px);
         @extend .inlineblock;
         @include rounded-corners(2px);
 

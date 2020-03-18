@@ -22,7 +22,8 @@ $(function() {
       searching: false,
       lengthChange: false,
       pageLength: 25,
-      scrollY: "200px",
+      //scrollY: "200px",
+      "dom": 'r<"st-tableFixHeight"t><"bottom"ip><"clear">',
       scrollCollapse: true,
       columnDefs: [{ targets: "no-sort", orderable: false }],
       oLanguage: {
