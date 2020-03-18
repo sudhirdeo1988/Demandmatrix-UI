@@ -1255,9 +1255,9 @@
 
     .select2-selection {
       box-sizing: border-box;
-      border: 1px solid #cac9be;
+      border: 1px solid #cac9be !important;
       min-height: 38px;
-      max-height: 50px;
+      max-height: 100px;
       overflow-y: auto;
       position: relative;
 
