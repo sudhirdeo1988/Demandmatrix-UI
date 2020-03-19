@@ -222,11 +222,11 @@ html {
   clear: both;
 }
 
-.left, .c-header .linkSect .linkTab, .c-header .titleSect {
+.left, .c-header .titleSect {
   float: left;
 }
 
-.right, .c-header .linkSect, .c-header .filterSect {
+.right {
   float: right;
 }
 
@@ -278,7 +278,7 @@ html {
   display: table;
 }
 
-.t-center, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .c-header .linkSect .linkTab, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .loginLogo, .btn-filter, .c-btn {
+.t-center, .sb-tableContainer .sb-table.st-clean .dataTables_paginate .paginate_button, .c-header .linkSect .linkTab, .c-header .linkSect, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .loginLogo, .btn-filter, .c-btn {
   text-align: center;
 }
 
@@ -286,7 +286,7 @@ html {
   text-align: left;
 }
 
-.t-right {
+.t-right, .c-header .filterSect {
   text-align: right;
 }
 
@@ -845,10 +845,9 @@ html {
   margin: 0;
 }
 .c-header .filterSect {
-  padding: 12px 0 12px 16px;
+  padding: 12px 22px;
 }
 .c-header .linkSect {
-  border-right: 1px solid #e3e3e3;
   margin-left: 16px;
 }
 .c-header .linkSect .linkTab {
