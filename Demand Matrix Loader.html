@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<style>
+body{
+	background: #1C2C49;
+}
+
+.dm-loader{
+	 position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%,-50%);
+	 width: 80px;
+		height: 80px;
+		display: grid;
+	 grid-gap: 15%;
+	 grid-template-rows: 1fr 1fr 1fr 1fr;
+	 grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.dm-loader > div{
+	border-radius: 50%;
+	border: 1px solid #fff;
+	opacity: 0.6;
+}
+
+.dm-loader-or{
+	background: #F46120;
+	border-color: #F46120 !important;
+	opacity: 1;
+}
+
+.dm-loader > div:nth-child(1),
+.dm-loader > div:nth-child(6),
+.dm-loader > div:nth-child(11),
+.dm-loader > div:nth-child(16){
+	 transform: scale(0.9);
+}
+.dm-loader > div:nth-child(2),
+.dm-loader > div:nth-child(7),
+.dm-loader > div:nth-child(12){
+	 transform: scale(1);
+}
+
+.dm-loader > div:nth-child(3),
+.dm-loader > div:nth-child(4),
+.dm-loader > div:nth-child(8){
+	 transform: scale(1.2);
+}
+.dm-loader > div:nth-child(5),
+.dm-loader > div:nth-child(10),
+.dm-loader > div:nth-child(15){
+	 transform: scale(0.8);
+}
+.dm-loader > div:nth-child(9),
+.dm-loader > div:nth-child(14){
+	 transform: scale(0.7);
+}
+.dm-loader > div:nth-child(13){
+	 transform: scale(0.6);
+}
+
+
+.dm-loader:after{
+	 content: "";
+	 position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 width: 1px;
+		height: 120%;
+	transform-origin: center center;
+	 background: #F46120;
+	transform: translate(-50%,-50%)rotate(45deg);
+	opacity: 0.8
+}
+
+
+.dm-loader > div:nth-child(4){
+	animation: scale-pulse-1 0.8s infinite;
+	animation-delay: 0;
+}
+.dm-loader > div:nth-child(7){
+	animation: scale-pulse-2 0.8s infinite;
+	animation-delay: 0.1s;
+}
+.dm-loader > div:nth-child(10){
+	animation: scale-pulse-3 0.8s infinite;
+	animation-delay: 0.2s;
+}
+.dm-loader > div:nth-child(13){
+	animation: scale-pulse-4 0.8s infinite;
+	animation-delay: 0.3s;
+}
+
+
+@keyframes scale-pulse-1 {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+    }
+    50% {
+        opacity: .35;
+        -webkit-transform: scale(.8);
+                transform: scale(.8);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+    }
+}
+
+@keyframes scale-pulse-2 {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    50% {
+        opacity: .35;
+        -webkit-transform: scale(.6);
+                transform: scale(.6);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@keyframes scale-pulse-3 {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+    }
+    50% {
+        opacity: .35;
+        -webkit-transform: scale(.4);
+                transform: scale(.4);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+    }
+}
+
+@keyframes scale-pulse-4 {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0.6);
+                transform: scale(0.6);
+    }
+    50% {
+        opacity: .35;
+        -webkit-transform: scale(.2);
+                transform: scale(.2);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(0.6);
+                transform: scale(0.6);
+    }
+}
+
+
+
+
+</style>
+</head>
+<body>
+<div class="dm-loader">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div class="dm-loader-or"></div>
+	
+	<div></div>
+	<div></div>
+	<div class="dm-loader-or"></div>
+	<div></div>
+	
+	<div></div>
+	<div class="dm-loader-or"></div>
+	<div></div>
+	<div></div>
+	
+	<div class="dm-loader-or"></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+
+</body>
+</html>

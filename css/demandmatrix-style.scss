@@ -557,6 +557,7 @@
   @extend .relative;
 }
 .c-header {
+  border-bottom: 2px solid $secondaryColor;
   background-color: $white;
   height: 65px;
   overflow: hidden;
@@ -589,23 +590,25 @@
   }
   .linkSect {
     margin-left: 16px;
+    padding-top: 12px;
     @extend .t-center;
     .linkTab {
       border: 0;
-      background-color: $white;
-      border-bottom: 5px solid transparent;
-      color: $secondaryColor;
+      box-sizing: border-box;
+      background-color: #EDEDED;
+      color: $textColor;
       cursor: pointer;
-      padding: 27px 16px 16px 16px;
+      padding: 19px 22px 15px;
       font-size: 14px;
       line-height: 17px;
+      margin: 0 1px;
       outline: none !important;
       @extend .t-center;
+      @include rounded-corners(5px 5px 0 0);
 
       &.st-active {
-        background-color: #ededed;
-        border-bottom: 5px solid red;
-        color: $textColor;
+        background-color: $secondaryColor;
+        color: $white;
       }
     }
   }
@@ -1573,4 +1576,180 @@
       }
     }
   }
+}
+
+/* ------------------------------
+15. Loader
+-------------------------------- */
+.dm-loaderWrapper{
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 97;
+}
+.dm-loader{
+  padding: 20px;
+  background-color: #1C2C49;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 120px;
+  height: 120px;
+  display: grid;
+  z-index: 99;
+  grid-gap: 15%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @include rounded-corners(10px);
+}
+
+.dm-loader > div{
+  border-radius: 50%;
+  border: 1px solid #fff;
+  opacity: 0.6;
+}
+
+.dm-loader-or{
+  background: #F46120;
+  border-color: #F46120 !important;
+  opacity: 1;
+}
+
+.dm-loader > div:nth-child(1),
+.dm-loader > div:nth-child(6),
+.dm-loader > div:nth-child(11),
+.dm-loader > div:nth-child(16){
+  transform: scale(0.9);
+}
+.dm-loader > div:nth-child(2),
+.dm-loader > div:nth-child(7),
+.dm-loader > div:nth-child(12){
+  transform: scale(1);
+}
+
+.dm-loader > div:nth-child(3),
+.dm-loader > div:nth-child(4),
+.dm-loader > div:nth-child(8){
+  transform: scale(1.2);
+}
+.dm-loader > div:nth-child(5),
+.dm-loader > div:nth-child(10),
+.dm-loader > div:nth-child(15){
+  transform: scale(0.8);
+}
+.dm-loader > div:nth-child(9),
+.dm-loader > div:nth-child(14){
+  transform: scale(0.7);
+}
+.dm-loader > div:nth-child(13){
+  transform: scale(0.6);
+}
+
+
+.dm-loader:after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1px;
+  transform-origin: center center;
+  background: #F46120;
+  transform: translate(-50%,-50%)rotate(45deg);
+  opacity: 0.8;
+  height: 80%;
+}
+
+
+.dm-loader > div:nth-child(4){
+  animation: scale-pulse-1 0.8s infinite;
+  animation-delay: 0;
+}
+.dm-loader > div:nth-child(7){
+  animation: scale-pulse-2 0.8s infinite;
+  animation-delay: 0.1s;
+}
+.dm-loader > div:nth-child(10){
+  animation: scale-pulse-3 0.8s infinite;
+  animation-delay: 0.2s;
+}
+.dm-loader > div:nth-child(13){
+  animation: scale-pulse-4 0.8s infinite;
+  animation-delay: 0.3s;
+}
+
+
+@keyframes scale-pulse-1 {
+   0% {
+       opacity: 1;
+       -webkit-transform: scale(1.2);
+               transform: scale(1.2);
+   }
+   50% {
+       opacity: .35;
+       -webkit-transform: scale(.8);
+               transform: scale(.8);
+   }
+   100% {
+       opacity: 1;
+       -webkit-transform: scale(1.2);
+               transform: scale(1.2);
+   }
+}
+
+@keyframes scale-pulse-2 {
+   0% {
+       opacity: 1;
+       -webkit-transform: scale(1);
+               transform: scale(1);
+   }
+   50% {
+       opacity: .35;
+       -webkit-transform: scale(.6);
+               transform: scale(.6);
+   }
+   100% {
+       opacity: 1;
+       -webkit-transform: scale(1);
+               transform: scale(1);
+   }
+}
+
+@keyframes scale-pulse-3 {
+   0% {
+       opacity: 1;
+       -webkit-transform: scale(0.8);
+               transform: scale(0.8);
+   }
+   50% {
+       opacity: .35;
+       -webkit-transform: scale(.4);
+               transform: scale(.4);
+   }
+   100% {
+       opacity: 1;
+       -webkit-transform: scale(0.8);
+               transform: scale(0.8);
+   }
+}
+
+@keyframes scale-pulse-4 {
+   0% {
+       opacity: 1;
+       -webkit-transform: scale(0.6);
+               transform: scale(0.6);
+   }
+   50% {
+       opacity: .35;
+       -webkit-transform: scale(.2);
+               transform: scale(.2);
+   }
+   100% {
+       opacity: 1;
+       -webkit-transform: scale(0.6);
+               transform: scale(0.6);
+   }
 }
