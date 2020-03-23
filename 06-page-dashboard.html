@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemandMatrix :: Dashboard</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/demandmatrix-style.css" />
+  </head>
+  <body>
+    <!-- ********** Component :: Sidebar **********  -->
+    <div class="c-sidebar">
+      <div class="sidebarLogo">
+        <img src="./images/logo_square.png" alt="image" />
+      </div>
+      <div class="sidebarNav">
+        <ul>
+          <li>
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Home"
+            >
+              <i class="icon dm dm-icon-dashboard"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="navItem st-active"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
+              <i class="icon dm dm-icon-technology"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
+              <i class="icon dm dm-icon-aut"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
+              <i class="icon dm dm-icon-adoption"></i>
+            </button>
+          </li>
+          <li class="lastChild">
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Logout"
+            >
+              <i class="icon dm dm-logout"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ********** Component :: Sidebar End **********  -->
+
+    <!-- ********** Component :: Main Body **********  -->
+    <div class="c-mainBody">
+      <!-- **** Component :: Header ****  -->
+      <div class="c-header container-fluid pad0">
+        <div class="row">
+          <div class="col">
+            <!-- ** Header Title ** -->
+            <div class="titleSect">
+              <h1 class="pageHeading">Dashboard</h1>
+            </div>
+            <!-- ** Header Title End ** -->
+          </div>
+          <div class="col">
+            <!-- ** Header Tabs ** -->
+            <div class="linkSect">
+              <button class="linkTab st-active">Analytics View</button>
+              <button class="linkTab">Tabular View</button>
+            </div>
+            <!-- ** Header Tabs End ** -->
+          </div>
+          <div class="col">
+            <!-- ** Filter Button ** -->
+            <div class="filterSect">
+              <button class="btn-filter">
+                <i class="icon dm-filter"></i>
+                Filter Data
+              </button>
+            </div>
+            <!-- ** Filter Button End ** -->
+          </div>
+        </div>
+      </div>
+      <!-- **** Component :: Header End ****  -->
+
+      <!-- **** Search Body **** -->
+      <div class="c-searchBody">
+        <!-- ** Table ** -->
+        <div class="sb-searchTable">
+          <div class="row">
+
+            <!-- ***** Right Section ***** -->
+            <div class="col-12">
+              <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <!-- ***** Graph Section ***** -->
+                  <div class="c-graphCard">
+                    <h3 class="gc_title">Top Technology Products</h3>
+                  </div>
+                  <!-- ***** Graph Section End ***** -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <!-- ***** Graph Section ***** -->
+                  <div class="c-graphCard">
+                    <h3 class="gc_title">Top Actively Used Technologies</h3>
+                  </div>
+                  <!-- ***** Graph Section End ***** -->
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <!-- ***** Graph Section ***** -->
+                  <div class="c-graphCard">
+                    <h3 class="gc_title">Trending skills</h3>
+                  </div>
+                  <!-- ***** Graph Section End ***** -->
+                </div>
+
+                <div class="col-sm-6 col-xs-12">
+                  <!-- ***** Graph Section ***** -->
+                  <div class="c-graphCard">
+                    <h3 class="gc_title">Adoption-Deadoption</h3>
+                  </div>
+                  <!-- ***** Graph Section End ***** -->
+                </div>
+
+                <div class="col-sm-6 col-xs-12">
+                  <!-- ***** Graph Section ***** -->
+                  <div class="c-graphCard">
+                    <h3 class="gc_title">Top Next Tech Purchase</h3>
+                  </div>
+                  <!-- ***** Graph Section End ***** -->
+                </div>
+              </div>
+            </div>
+            <!-- ***** Right Section End ***** -->
+          </div>
+        </div>
+        <!-- ** Table End ** -->
+      </div>
+      <!-- **** Search Body End **** -->
+    </div>
+    <!-- ********** Component :: Main Body End **********  -->
+
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </body>
+</html>
