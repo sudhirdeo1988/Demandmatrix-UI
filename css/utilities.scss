@@ -372,7 +372,9 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.hideScroll{
+  overflow: hidden;
+}
 @mixin rounded-corners($property) {
   -webkit-border-radius: $property;
   -moz-border-radius: $property;

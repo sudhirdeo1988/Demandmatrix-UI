@@ -39,6 +39,7 @@ $(function() {
 
   if ($(".js-pageFilter").length) {
     $(".js-pageFilter, .js-closeFilter").on("click", function() {
+      $('body').toggleClass('hideScroll');
       var parentDiv = $(this).parents(".c-searchBody");
       parentDiv.toggleClass("js-filterOpen");
     });
@@ -49,6 +50,12 @@ $(function() {
 
   if ($(".sb-autoselect").length) {
     $(".sb-autoselect .js-serchSelect").select2();
+  }
+
+  if ($(".sb-filterBody .filterRight").length) {
+    $(".filterRight").mCustomScrollbar({
+      theme:"dark"
+    });
   }
 
 });

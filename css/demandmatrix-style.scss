@@ -690,7 +690,7 @@
     background-color: #fff;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: -21px;
     left: 0;
     z-index: 5;
     max-height: 0;
@@ -939,6 +939,7 @@
     border-left: 1px solid #e0dfd5;
     padding: 0;
     border-radius: 0 0.3rem 0 0;
+    max-height: 365px;
     @extend .relative;
 
     .titleBlock {
@@ -1138,7 +1139,7 @@
   &.st-custom{
     .modal-dialog{
       box-sizing: border-box;
-      width: 300px;
+      width: 400px;
 
         .modal-body{
           padding: 24px 16px;
@@ -1758,4 +1759,12 @@
        -webkit-transform: scale(0.6);
                transform: scale(0.6);
    }
+}
+
+/* -------- OverWrite Css ********* */
+.mCSB_inside>.mCSB_container {
+  margin-right: 10px;
+}
+.mCSB_scrollTools{
+  width: 10px;
 }
