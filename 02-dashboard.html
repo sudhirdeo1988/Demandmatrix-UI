@@ -8,7 +8,6 @@
     <!-- ***** CSS Import ***** -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/datatables.min.css" />
-    <link rel="stylesheet" type="text/css" href="./css/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="./css/demandmatrix-style.css" />
   </head>
   <body>
@@ -102,6 +101,11 @@
           <div class="col-4">
             <!-- ** Filter Button ** -->
             <div class="filterSect">
+              <button class="btn-filter clean">
+                <i class="icon dm-download-1"></i>
+                Download Catalog
+              </button>
+
               <button class="btn-filter">
                 <i class="icon dm-filter"></i>
                 Filter Data
@@ -213,32 +217,6 @@
 
         <!-- ** Table ** -->
         <div class="sb-searchTable">
-
-          <!-- ** Loader ** -->
-          <div class="dm-loaderWrapper">
-            <div class="dm-loader">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div class="dm-loader-or"></div>
-
-              <div></div>
-              <div></div>
-              <div class="dm-loader-or"></div>
-              <div></div>
-
-              <div></div>
-              <div class="dm-loader-or"></div>
-              <div></div>
-              <div></div>
-
-              <div class="dm-loader-or"></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        <!-- ** Loader End ** -->
 
           <!-- ** Table Filter Top ** -->
           <div class="filterSect">
@@ -378,6 +356,33 @@
 
           <!-- ** Table Container ** -->
           <div class="sb-tableContainer">
+
+          <!-- ** Loader ** -->
+          <div class="dm-loaderWrapper">
+            <div class="dm-loader">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div class="dm-loader-or"></div>
+
+              <div></div>
+              <div></div>
+              <div class="dm-loader-or"></div>
+              <div></div>
+
+              <div></div>
+              <div class="dm-loader-or"></div>
+              <div></div>
+              <div></div>
+
+              <div class="dm-loader-or"></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <!-- ** Loader End ** -->
+
             <div class="sb-table st-clean">
               <table class="table js-dataTable">
                 <thead>
@@ -535,7 +540,6 @@
     <script type="text/javascript" src="./js/popper.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/datatables.min.js"></script>
-    <script type="text/javascript" src="./js/jquery.mCustomScrollbar.min.js"></script>
     <script type="text/javascript" src="./js/scripts.js"></script>
   </body>
 </html>

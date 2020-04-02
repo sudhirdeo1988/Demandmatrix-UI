@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemandMatrix :: Dashboard</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/datatables.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="./css/demandmatrix-style.css" />
+  </head>
+  <body class="hideScroll">
+    <!-- ********** Component :: Sidebar **********  -->
+    <div class="c-sidebar">
+      <div class="sidebarLogo">
+        <img src="./images/logo_square.png" alt="image" />
+      </div>
+      <div class="sidebarNav">
+        <ul>
+          <li>
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Home"
+            >
+              <i class="icon dm dm-icon-dashboard"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="navItem st-active"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
+              <i class="icon dm dm-icon-technology"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
+              <i class="icon dm dm-icon-aut"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Tooltip on right"
+            >
+              <i class="icon dm dm-icon-adoption"></i>
+            </button>
+          </li>
+          <li class="lastChild">
+            <button
+              class="navItem"
+              data-toggle="tooltip"
+              data-trigger="hover"
+              data-placement="right"
+              title="Logout"
+            >
+              <i class="icon dm dm-logout"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ********** Component :: Sidebar End **********  -->
+
+    <!-- ********** Component :: Main Body **********  -->
+    <div class="c-mainBody">
+      <!-- **** Component :: Header ****  -->
+      <div class="c-header">
+        <!-- ** Header Title ** -->
+        <div class="titleSect">
+          <h1 class="pageHeading">Technology Profile</h1>
+        </div>
+        <!-- ** Header Title End ** -->
+
+        <!-- ** Header Tabs ** -->
+        <div class="linkSect">
+          <button class="linkTab st-active">Analytics View</button>
+          <button class="linkTab">Tabular View</button>
+        </div>
+        <!-- ** Header Tabs End ** -->
+
+        <!-- ** Filter Button ** -->
+        <div class="filterSect">
+          <button class="btn-filter">
+            <i class="icon dm-filter"></i>
+            Filter Data
+          </button>
+        </div>
+        <!-- ** Filter Button End ** -->
+      </div>
+      <!-- **** Component :: Header End ****  -->
+
+      <!-- **** Search Body **** -->
+      <div class="c-searchBody js-filterOpen">
+
+        <!-- **** Page Filter **** -->
+        <div class="c-colFilter">
+
+          <div class="pad0">
+            <div class="row no-gutters sb-filterBody">
+              <div class="col-4">
+                <div class="filterLeft">
+                  <h3 class="f_title">Upload Companies</h3>
+                  <span class="f_text">Download and edit the sample csv file to upload companies.</span>
+                  <!-- ** Download  ** -->
+                  <div class="clearfix m15-btm">
+                    <button class="btn-filter clean">
+                      <i class="icon dm-download-1"></i>
+                      Download Sample.csv
+                    </button>
+                  </div>
+
+                  <div class="clearfix m15-btm">
+                    <button class="btn-filter">
+                      <i class="icon dm-upload"></i>
+                      Upload Companies (.csv)
+                    </button>
+                  </div>
+                  <!-- ** Download End  ** -->
+
+                  <!-- ** Uploaded Company  ** -->
+                  <div class="u_company">
+                    <button class="u_remove">
+                      <i class="icon dm dm-close-round"></i>
+                    </button>
+                    <div class="u_icon">
+                      <i class="dm icon dm-file"></i>
+                    </div>
+                    <span class="u_file">companies_123.csv</span>
+                    <span class="u_size">54 Companies</span>
+                  </div>
+                  <!-- ** Uploaded Company End  ** -->
+
+                </div>
+              </div>
+
+              <div class="col-8">
+                <div class="filterRight">
+                  <div class="titleBlock">
+                    <h3 class="f_title m0">Filters</h3>
+                  </div>
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Country :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="states[]"
+                                multiple="multiple"
+                              >
+                                <option value="AL">AlabamaAlabama Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Industry :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="states[]"
+                                multiple="multiple"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Catagory :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="Catagory"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Sub Catagory :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="subCatagory"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Revenue :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="revenue"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Employee Size :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="empSize"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Intensity :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="Intensity"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row c-costomCheck">
+                          <div class="col">
+                            <div class="form-check c-checkGroup">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="c1"
+                                value="1"
+                              />
+                              <label class="form-check-label" role="button" for="c1">
+                                <i class="icon"></i>
+                                Only Actively Used
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">First Found :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="c-formGroup js-datepicker">
+                              <input type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Last Found :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="c-formGroup js-datepicker">
+                              <input type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+                </div>
+              </div>
+            </div>
+
+            <div class="filterFooter">
+              <div class="row">
+                <div class="col-6">
+                  <div class="filterLabel">
+                    <span class="label">Product / Company</span>
+                    <span class="info lg">MICROSOFT OFFICE</span>
+                  </div>
+                </div>
+                <div class="col-6 t-right">
+                  <button class="btn c-btn gray js-closeFilter">
+                    Cancel
+                  </button>
+                  <button class="btn c-btn">Show Filtered Data</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- **** Page Filter End **** -->
+
+        <!-- ** Header ** -->
+        <div class="sb_header">
+          <div class="row">
+            <div class="col-4">
+              <div class="filterLabel">
+                <span class="label">Product</span>
+                <span class="info lg">MICROSOFT OFFICE</span>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="filterLabel">
+                <span class="label">Filters</span>
+                <span class="info">No Filters selected.</span>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="filterLabel">
+                <span class="label">Results</span>
+                <span class="info">150 Companies</span>
+              </div>
+            </div>
+
+            <div class="col-2 t-right">
+              <!-- <button
+                class="btn-filter js-pageFilter"
+                data-toggle="modal"
+                data-target="#exampleModalCenter"
+              >
+                <i class="icon dm-filter"></i>
+                Filter Data
+              </button> -->
+              <button
+              class="btn-filter js-pageFilter"
+            >
+              <i class="icon dm-filter"></i>
+              Filter Data
+            </button>
+            </div>
+          </div>
+        </div>
+        <!-- ** Header End ** -->
+
+        <!-- ** Table ** -->
+        <div class="sb-searchTable">
+          <!-- ** Table Filter Top ** -->
+          <div class="filterSect">
+            <div class="row">
+              <div class="col">
+                <!-- ** Dropdown ** -->
+                <div class="dropdown sb-dropdown xs">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    1
+                  </button>
+                  <div
+                    class="dropdown-menu dropdown-menu-lg-right"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <button class="dropdown-item" type="button">1</button>
+                    <button class="dropdown-item" type="button">2</button>
+                    <button class="dropdown-item" type="button">3</button>
+                  </div>
+                </div>
+                <!-- ** Dropdown ** -->
+                <div class="staticText inlineblock m5-left">
+                  Companies per page
+                </div>
+              </div>
+
+              <!-- ** Dropdown ** -->
+              <div class="col t-right">
+                <!-- ** Dropdown ** -->
+                <div class="dropdown sb-dropdown lg">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="icon dm-spreadsheet"></i>
+                    Columns
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <div class="title">
+                      <span>Displayed Columns</span>
+                      <button class="reset">Reset</button>
+                    </div>
+                    <div class="optionList">
+                      <ul>
+                        <li>
+                          <div class="form-check c-checkGroup">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="c1"
+                              value="1"
+                            />
+                            <label
+                              class="form-check-label"
+                              role="button"
+                              for="c1"
+                            >
+                              <i class="icon"></i>
+                              Remember Me
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check c-checkGroup">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="c1"
+                              value="1"
+                            />
+                            <label
+                              class="form-check-label"
+                              role="button"
+                              for="c1"
+                            >
+                              <i class="icon"></i>
+                              Remember Me
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check c-checkGroup">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="c1"
+                              value="1"
+                            />
+                            <label
+                              class="form-check-label"
+                              role="button"
+                              for="c1"
+                            >
+                              <i class="icon"></i>
+                              Remember Me
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- ** Dropdown ** -->
+
+                <!-- ** Switch ** -->
+                <div class="sb-toggleSwich">
+                  <div class="can-toggle">
+                    <input id="a" type="checkbox" />
+                    <label for="a">
+                      <div
+                        class="can-toggle__switch"
+                        data-checked="Analytics View"
+                        data-unchecked="Tabular View"
+                      ></div>
+                    </label>
+                  </div>
+                </div>
+                <!-- ** Switch End ** -->
+              </div>
+              <!-- ** Dropdown End ** -->
+            </div>
+          </div>
+          <!-- ** Table Filter Top End ** -->
+
+          <!-- ** Table Container ** -->
+          <div class="sb-tableContainer">
+            <div class="sb-table st-clean">
+              <table class="table js-dataTable">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;" class="sorting">Company</th>
+                    <th style="width: 10%;" class="no-sort">Employee Size</th>
+                    <th style="width: 15%;">Revenue</th>
+                    <th style="width: 10%;" class="no-sort">First Round</th>
+                    <th style="width: 10%;" class="no-sort">Last Round</th>
+                    <th style="width: 10%;" class="no-sort">Intensity</th>
+                    <th style="width: 10%;" class="no-sort">Country</th>
+                    <th style="width: 15%;" class="no-sort">Industry</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1M Codefinder</td>
+                    <td>200-500</td>
+                    <td>$14,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>2M Codefinder</td>
+                    <td>100-400</td>
+                    <td>$35,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>3M Codefinder</td>
+                    <td>200-500</td>
+                    <td>$4,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>1M Codefinder</td>
+                    <td>200-500</td>
+                    <td>$14,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>2M Codefinder</td>
+                    <td>100-400</td>
+                    <td>$35,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                  <tr>
+                    <td>3M Codefinder</td>
+                    <td>200-500</td>
+                    <td>$4,123,000</td>
+                    <td>12/03/2001</td>
+                    <td>12/03/2001</td>
+                    <td>HIGH</td>
+                    <td>Germany</td>
+                    <td>IT Infrastructure</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- ** Table Container End ** -->
+        </div>
+        <!-- ** Table End ** -->
+      </div>
+      <!-- **** Search Body End **** -->
+    </div>
+    <!-- ********** Component :: Main Body End **********  -->
+
+    <!-- Filter Modal -->
+    <div
+      class="modal fade sb-modal st-filter"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body pad0">
+            <div class="row no-gutters sb-filterBody">
+              <div class="col-4">
+                <div class="filterLeft">
+                  <h3 class="f_title">Company or Product</h3>
+                  <span class="f_text m25-btm"
+                    >Technology profile Technology profile o Technology profile
+                    o Technology profile o</span
+                  >
+
+                  <!-- ** Switch ** -->
+                  <div class="col-12 pad0 m25-btm">
+                    <div class="sb-toggleSwich clearfix block">
+                      <div class="can-toggle sm">
+                        <input id="b" type="checkbox" />
+                        <label for="b">
+                          <div
+                            class="can-toggle__switch"
+                            data-checked="Company"
+                            data-unchecked="Product"
+                          ></div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ** Switch End ** -->
+
+                  <!-- ** Dropdown ** -->
+                  <div class="dropdown sb-dropdown st-fluid">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      MICROSOFT OFFICE
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                  <!-- ** Dropdown ** -->
+                </div>
+              </div>
+
+              <div class="col-8">
+                <div class="filterRight">
+                  <div class="titleBlock">
+                    <h3 class="f_title m0">Filters</h3>
+                  </div>
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Country :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="states[]"
+                                multiple="multiple"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Industry :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="states[]"
+                                multiple="multiple"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Catagory :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="Catagory"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Sub Catagory :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="subCatagory"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Revenue :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="revenue"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Employee Size :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="empSize"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Intensity :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="sb-multiselect">
+                              <select
+                                class="js-dropdown js-serchSelect"
+                                name="Intensity"
+                              >
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+
+                  <!-- **** Info Block **** -->
+                  <div class="infoBlock">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">First Found :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="c-formGroup js-datepicker">
+                              <input type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="b_label">Last Found :</label>
+                          </div>
+                          <div class="col-8">
+                            <div class="c-formGroup js-datepicker">
+                              <input type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- **** Info Block End **** -->
+                </div>
+              </div>
+            </div>
+
+            <div class="modalFooter">
+              <div class="row">
+                <div class="col-6">
+                  <div class="filterLabel">
+                    <span class="label">Product / Company</span>
+                    <span class="info lg">MICROSOFT OFFICE</span>
+                  </div>
+                </div>
+                <div class="col-6 t-right">
+                  <button class="btn c-btn gray" data-dismiss="modal">
+                    Cancel
+                  </button>
+                  <button class="btn c-btn">Show Filtered Data</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/datatables.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./js/bootstrap-datepicker.min.js"
+    ></script>
+    <script type="text/javascript" src="./js/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </body>
+</html>

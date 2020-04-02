@@ -191,6 +191,18 @@
   content: "H";
 }
 
+.dm-upload:before {
+  content: "J";
+}
+
+.dm-download-1:before {
+  content: "K";
+}
+
+.dm-file:before {
+  content: "I";
+}
+
 /* -------------------------------------
 	Variables Setting
 ------------------------------------- */
@@ -242,7 +254,8 @@ html {
   position: absolute;
 }
 
-.relative, .sb-accordian .card .card-header .btn, .sb-multiselect .select2-container, .sb-modal.st-custom .close, .c-similatTabs ul li .tagBtn, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .filterRight .infoBlock .b_label, .sb-filterBody .filterRight, .sb-filterBody .filterLeft, .sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .sb-dropdown.st-fluid .btn, .btn-filter .icon, .btn-filter, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.relative, .sb-accordian .card .card-header .btn, .sb-multiselect .select2-container, .sb-modal.st-custom .close, .c-similatTabs ul li .tagBtn, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .u_company .u_file,
+.sb-filterBody .u_company .u_size, .sb-filterBody .u_company, .sb-filterBody .filterRight .infoBlock .b_label, .sb-filterBody .filterRight, .sb-filterBody .filterLeft, .sb-tableContainer .sb-table.st-clean .table tr td .c-tdInfo.c-notifyDot, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody, .c-header .titleSect .pageHeading, .c-header, .c-mainBody, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .staticText, .sb-toggleSwich, .sb-dropdown.st-fluid .btn, .btn-filter .icon, .btn-filter, .c-checkGroup .form-check-label .icon::before, .c-checkGroup .form-check-label .icon, .c-checkGroup .form-check-input, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   position: relative;
 }
 
@@ -262,7 +275,8 @@ html {
   visibility: hidden;
 }
 
-.block, .sb-autoselect, .card-body .staticText, .sb-multiselect .select2-container, .sb-modal.st-custom .modal-dialog .modal-body .card-body .cardTitle, .sb-modal .modalFooter .filterLabel .info, .sb-modal .modalFooter .filterLabel .label, .c-blankFilter .displayText, .c-similatTabs ul li .tagBtn, .c-similatTabs ul, .c-similatTabs .tabTitle, .c-similatTabs, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .c-filterTags ul, .sb-filterBody .c-filterTags, .sb-filterBody .f_text, .sb-filterBody .f_title, .sb-filterBody .filterRight .infoBlock .b_label, .sb-tableContainer .sb-table.st-clean, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody .sb_header, .c-searchBody, .c-header .titleSect .pageHeading, .c-header .titleSect, .c-header, .c-mainBody, .c-sidebar .sidebarLogo img, .c-sidebar .sidebarLogo, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .staticText, .sb-dropdown.st-fluid .btn, .sb-dropdown.st-fluid, .sb-dropdown .dropdown-menu .optionList ul li, .sb-dropdown .dropdown-menu .optionList ul, .sb-dropdown .dropdown-menu .optionList, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
+.block, .sb-autoselect, .card-body .staticText, .sb-multiselect .select2-container, .sb-modal.st-custom .modal-dialog .modal-body .card-body .cardTitle, .sb-modal .modalFooter .filterLabel .info, .sb-modal .modalFooter .filterLabel .label, .c-blankFilter .displayText, .c-similatTabs ul li .tagBtn, .c-similatTabs ul, .c-similatTabs .tabTitle, .c-similatTabs, .sb-filterBody .c-filterTags ul li .tagBtn, .sb-filterBody .c-filterTags ul, .sb-filterBody .c-filterTags, .sb-filterBody .u_company .u_file,
+.sb-filterBody .u_company .u_size, .sb-filterBody .u_company .u_icon .icon, .sb-filterBody .u_company, .sb-filterBody .f_text, .sb-filterBody .f_title, .sb-filterBody .filterRight .infoBlock .b_label, .sb-tableContainer .sb-table.st-clean, .sb-tableContainer, .c-searchBody .sb-searchTable, .c-searchBody .sb_header .filterLabel .info, .c-searchBody .sb_header .filterLabel .label, .c-searchBody .sb_header, .c-searchBody, .c-header .titleSect .pageHeading, .c-header .titleSect, .c-header, .c-mainBody, .c-sidebar .sidebarLogo img, .c-sidebar .sidebarLogo, .c-loginBox .loginForm, .c-loginBox .loginSubTitle, .c-loginBox .loginTitle, .c-loginBox, .loginLogo, .staticText, .sb-dropdown.st-fluid .btn, .sb-dropdown.st-fluid, .sb-dropdown .dropdown-menu .optionList ul li, .sb-dropdown .dropdown-menu .optionList ul, .sb-dropdown .dropdown-menu .optionList, .c-btn.lg, .c-checkGroup .form-check-label, .c-checkGroup .form-check-input:checked ~ .form-check-label .icon::after, .c-checkGroup, .c-formGroup.st-password .showPass::before, .c-formGroup .form-control, .c-formGroup {
   display: block;
 }
 
@@ -560,15 +574,24 @@ html {
   box-sizing: border-box;
   border: 0;
   color: #ffffff;
+  cursor: pointer;
   height: 41px;
   padding: 12px 24px;
   line-height: 20px;
   font-size: 14px;
   letter-spacing: 0.4px;
+  margin-left: 5px;
   outline: none !important;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+}
+.btn-filter.clean {
+  color: #f46120;
+  background-color: #EDEDED;
+}
+.btn-filter.clean .icon {
+  color: #f46120;
 }
 .btn-filter .icon {
   color: #ffffff;
@@ -1174,6 +1197,55 @@ html {
   font-size: 14px;
   line-height: 19px;
   margin: 0 0 12px;
+}
+.sb-filterBody .u_company {
+  background-color: #EDEDED;
+  padding: 8px 30px 8px 8px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.sb-filterBody .u_company .u_icon {
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 4px;
+}
+.sb-filterBody .u_company .u_icon .icon {
+  color: #303b50;
+  font-size: 18px;
+  line-height: 12px;
+}
+.sb-filterBody .u_company .u_file,
+.sb-filterBody .u_company .u_size {
+  color: #303b50;
+  font-family: "Metropolis-SemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 2px;
+}
+.sb-filterBody .u_company .u_size {
+  font-size: 12px;
+  font-family: "Metropolis-Regular", sans-serif;
+  line-height: 14px;
+  margin-bottom: 0;
+}
+.sb-filterBody .u_company .u_remove {
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  outline: none;
+}
+.sb-filterBody .u_company .u_remove .icon {
+  color: rgba(48, 59, 80, 0.4);
+  font-size: 12px;
 }
 .sb-filterBody .c-filterTags {
   margin: 16px 0 30px;
