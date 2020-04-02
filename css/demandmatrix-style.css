@@ -586,6 +586,17 @@ html {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+.btn-filter.sm {
+  height: 33px;
+  padding: 8px 15px;
+  line-height: 20px;
+  font-size: 12px;
+}
+.btn-filter.sm .icon {
+  font-size: 12px;
+  line-height: 9px;
+  top: 0;
+}
 .btn-filter.clean {
   color: #f46120;
   background-color: #EDEDED;
@@ -878,7 +889,7 @@ html {
 }
 .c-header .linkSect {
   margin-left: 16px;
-  padding-top: 12px;
+  padding-top: 13px;
 }
 .c-header .linkSect .linkTab {
   border: 0;
@@ -900,6 +911,14 @@ html {
   color: #ffffff;
 }
 
+@media only screen and (max-width: 1024px) {
+  .c-header .linkSect {
+    margin-left: 0;
+  }
+  .c-header .linkSect .linkTab {
+    padding: 19px 10px 15px;
+  }
+}
 /* ------------------------------
 4. Search Body
 -------------------------------- */
@@ -1016,6 +1035,12 @@ html {
 
   .btn-filter {
     padding: 12px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .btn-filter {
+    padding: 10px;
+    font-size: 12px;
   }
 }
 /* ------------------------------
@@ -1163,7 +1188,6 @@ html {
   border-left: 1px solid #e0dfd5;
   padding: 0;
   border-radius: 0 0.3rem 0 0;
-  max-height: 365px;
 }
 .sb-filterBody .filterRight .titleBlock {
   padding: 22px 16px 0 16px;

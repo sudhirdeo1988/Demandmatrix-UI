@@ -240,6 +240,18 @@
   @extend .t-center;
   @include rounded-corners(4px);
 
+  &.sm{
+    height: 33px;
+    padding: 8px 15px;
+    line-height: 20px;
+    font-size: 12px;
+      .icon{
+        font-size: 12px;
+        line-height: 9px;
+        top: 0;
+      }
+  }
+
   &.clean{
     color: $secondaryColor;
     background-color: #EDEDED;
@@ -602,7 +614,7 @@
   }
   .linkSect {
     margin-left: 16px;
-    padding-top: 12px;
+    padding-top: 13px;
     @extend .t-center;
     .linkTab {
       border: 0;
@@ -621,6 +633,16 @@
       &.st-active {
         background-color: $secondaryColor;
         color: $white;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .c-header {
+    .linkSect {
+      margin-left: 0;
+      .linkTab {
+        padding: 19px 10px 15px;
       }
     }
   }
@@ -748,6 +770,13 @@
   }
   .btn-filter{
     padding: 12px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .btn-filter{
+    padding: 10px;
+    font-size: 12px;
   }
 }
 
@@ -951,7 +980,6 @@
     border-left: 1px solid #e0dfd5;
     padding: 0;
     border-radius: 0 0.3rem 0 0;
-    max-height: 365px;
     @extend .relative;
 
     .titleBlock {

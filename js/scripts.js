@@ -52,10 +52,10 @@ $(function() {
     $(".sb-autoselect .js-serchSelect").select2();
   }
 
-  if ($(".sb-filterBody .filterRight").length) {
-    $(".filterRight").mCustomScrollbar({
-      theme:"dark"
-    });
-  }
+  // if ($(".sb-filterBody .filterRight").length) {
+  //   $(".filterRight").mCustomScrollbar({
+  //     theme:"dark"
+  //   });
+  // }
 
 });
