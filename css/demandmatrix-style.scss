@@ -243,7 +243,7 @@
   &.sm{
     height: 33px;
     padding: 8px 15px;
-    line-height: 20px;
+    line-height: 15px;
     font-size: 12px;
       .icon{
         font-size: 12px;
@@ -255,6 +255,16 @@
   &.clean{
     color: $secondaryColor;
     background-color: #EDEDED;
+
+      .icon{
+        color: $secondaryColor;
+      }
+  }
+
+  &.white{
+    border:1px solid #E3E3E3;
+    color: $secondaryColor;
+    background-color: #ffffff;
 
       .icon{
         color: $secondaryColor;
@@ -1513,6 +1523,12 @@
   @include rounded-corners(5px);
   @include box-shadow(0 0 4px rgba(0, 0, 0, 0.1));
 
+  .gc_graph{
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: calc(100% - 32px);
+  }
   .gc_title {
     color: $textColor;
     font-family: $font-semiBold;
@@ -1522,6 +1538,17 @@
     display: block;
     position: relative;
   }
+  .graphStats{
+    height: 50%;
+    .gc_stats{
+      color: $secondaryColor;
+      font-size: 42px;
+      line-height: 50px;
+      display: block;
+      position: relative;
+    }
+  }
+
 }
 @media only screen and (max-width: 1100px) {
   .c-graphCard {

@@ -589,7 +589,7 @@ html {
 .btn-filter.sm {
   height: 33px;
   padding: 8px 15px;
-  line-height: 20px;
+  line-height: 15px;
   font-size: 12px;
 }
 .btn-filter.sm .icon {
@@ -602,6 +602,14 @@ html {
   background-color: #EDEDED;
 }
 .btn-filter.clean .icon {
+  color: #f46120;
+}
+.btn-filter.white {
+  border: 1px solid #E3E3E3;
+  color: #f46120;
+  background-color: #ffffff;
+}
+.btn-filter.white .icon {
   color: #f46120;
 }
 .btn-filter .icon {
@@ -1658,12 +1666,28 @@ html {
   -ms-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
+.c-graphCard .gc_graph {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: calc(100% - 32px);
+}
 .c-graphCard .gc_title {
   color: #303b50;
   font-family: "Metropolis-SemiBold", sans-serif;
   font-size: 14px;
   line-height: 17px;
   margin: 0 0 14px;
+  display: block;
+  position: relative;
+}
+.c-graphCard .graphStats {
+  height: 50%;
+}
+.c-graphCard .graphStats .gc_stats {
+  color: #f46120;
+  font-size: 42px;
+  line-height: 50px;
   display: block;
   position: relative;
 }
