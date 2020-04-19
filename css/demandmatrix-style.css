@@ -203,6 +203,14 @@
   content: "I";
 }
 
+.dm-icon-download:before {
+  content: "L";
+}
+
+.dm-icon-upload:before {
+  content: "M";
+}
+
 /* -------------------------------------
 	Variables Setting
 ------------------------------------- */
@@ -618,6 +626,7 @@ html {
   vertical-align: middle;
   line-height: 10px;
   top: -1px;
+  margin-right: 7px;
 }
 
 .c-bodyContainer {
